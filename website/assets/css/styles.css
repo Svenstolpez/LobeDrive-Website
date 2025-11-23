@@ -638,16 +638,16 @@ section {
 /* Animation - Initial state */
 .science-animate-left,
 .science-animate-right {
-    opacity: 0;
-    transform: translateY(12px);
+    opacity: 1;
+    transform: translateY(0);
     transition: opacity 250ms ease-out, transform 250ms ease-out;
 }
 
 .science-animate-left .column-underline,
 .science-animate-right .column-underline {
-    transform: scaleX(0.5);
+    transform: scaleX(1);
     transform-origin: center;
-    opacity: 0.3;
+    opacity: 0.6;
     transition: transform 260ms ease-out, opacity 260ms ease-out;
 }
 
