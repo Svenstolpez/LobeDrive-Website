@@ -1,0 +1,28 @@
+<svg width="400" height="60" viewBox="0 0 400 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Horizon line -->
+  <line x1="0" y1="30" x2="400" y2="30" 
+        stroke="#E8E8E8" 
+        stroke-width="1"/>
+  
+  <!-- Road perspective lines -->
+  <path d="M 150 30 L 130 10" 
+        stroke="#A4B0A8" 
+        stroke-width="1.5"
+        opacity="0.4"/>
+  <path d="M 250 30 L 270 10" 
+        stroke="#A4B0A8" 
+        stroke-width="1.5"
+        opacity="0.4"/>
+  
+  <!-- Dashed center line -->
+  <line x1="0" y1="30" x2="400" y2="30" 
+        stroke="#6B9080" 
+        stroke-width="2"
+        stroke-dasharray="8 8"
+        opacity="0.3"/>
+  
+  <!-- Road markers (subtle) -->
+  <circle cx="100" cy="30" r="2" fill="#6B9080" opacity="0.5"/>
+  <circle cx="200" cy="30" r="2" fill="#6B9080" opacity="0.5"/>
+  <circle cx="300" cy="30" r="2" fill="#6B9080" opacity="0.5"/>
+</svg>

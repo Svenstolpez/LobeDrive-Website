@@ -1,0 +1,29 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer circle (button) -->
+  <circle cx="60" cy="60" r="55" 
+          fill="#2C5F4A" 
+          opacity="0.95"/>
+  
+  <!-- Inner glow circle -->
+  <circle cx="60" cy="60" r="50" 
+          fill="none"
+          stroke="#6B9080" 
+          stroke-width="2"
+          opacity="0.3"/>
+  
+  <!-- Center icon: Breath/pause symbol -->
+  <g transform="translate(60, 60)">
+    <!-- Breathing circle -->
+    <circle cx="0" cy="0" r="20" 
+            stroke="#FFFFFF" 
+            stroke-width="3"
+            stroke-dasharray="3 3"
+            fill="none"
+            opacity="0.8"/>
+    
+    <!-- Center dot -->
+    <circle cx="0" cy="0" r="4" 
+            fill="#FFFFFF"
+            opacity="0.9"/>
+  </g>
+</svg>

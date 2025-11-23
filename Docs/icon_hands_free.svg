@@ -1,0 +1,25 @@
+<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Steering wheel -->
+  <circle cx="30" cy="30" r="20" 
+          stroke="#2C5F4A" 
+          stroke-width="2.5"
+          fill="none"/>
+  
+  <!-- Bluetooth symbol -->
+  <g transform="translate(30, 30)">
+    <path d="M -4 -8 L 4 0 L -4 8 M 4 -8 L -4 0 L 4 8" 
+          stroke="#6B9080" 
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          fill="none"/>
+  </g>
+  
+  <!-- Checkmark (hands-free) -->
+  <path d="M 44 12 L 48 16 L 54 10" 
+        stroke="#7FA880" 
+        stroke-width="2.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        fill="none"/>
+</svg>

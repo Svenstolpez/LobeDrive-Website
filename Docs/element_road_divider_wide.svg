@@ -1,0 +1,48 @@
+<svg width="2000" height="120" viewBox="0 0 2000 120" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+  <!-- Horizon line -->
+  <line x1="0" y1="40" x2="2000" y2="40" 
+        stroke="#E8E8E8" 
+        stroke-width="1" 
+        opacity="0.8"/>
+  
+  <!-- Road perspective lines (left side) -->
+  <line x1="0" y1="120" x2="950" y2="40" 
+        stroke="#A4B0A8" 
+        stroke-width="2" 
+        opacity="0.4"/>
+  
+  <!-- Road perspective lines (right side) -->
+  <line x1="2000" y1="120" x2="1050" y2="40" 
+        stroke="#A4B0A8" 
+        stroke-width="2" 
+        opacity="0.4"/>
+  
+  <!-- Center dashed line (road markings) - perspective -->
+  <line x1="1000" y1="40" x2="800" y2="120" 
+        stroke="#6B9080" 
+        stroke-width="3" 
+        stroke-dasharray="15 10" 
+        stroke-linecap="round"
+        opacity="0.5"/>
+  
+  <line x1="1000" y1="40" x2="1200" y2="120" 
+        stroke="#6B9080" 
+        stroke-width="3" 
+        stroke-dasharray="15 10" 
+        stroke-linecap="round"
+        opacity="0.5"/>
+  
+  <!-- Decorative dots along horizon -->
+  <circle cx="200" cy="40" r="2.5" fill="#6B9080" opacity="0.5"/>
+  <circle cx="500" cy="40" r="2.5" fill="#6B9080" opacity="0.5"/>
+  <circle cx="1000" cy="40" r="3" fill="#6B9080" opacity="0.6"/>
+  <circle cx="1500" cy="40" r="2.5" fill="#6B9080" opacity="0.5"/>
+  <circle cx="1800" cy="40" r="2.5" fill="#6B9080" opacity="0.5"/>
+  
+  <!-- Additional perspective depth lines (subtle) -->
+  <line x1="0" y1="40" x2="2000" y2="40" 
+        stroke="#6B9080" 
+        stroke-width="2" 
+        stroke-dasharray="12 12" 
+        opacity="0.2"/>
+</svg>

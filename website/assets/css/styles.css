@@ -1,0 +1,1661 @@
+/* ===================================
+   CSS RESET & BASE STYLES
+   =================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #333333;
+    background-color: #F5F1E8;
+    overflow-x: hidden;
+}
+
+/* ===================================
+   TYPOGRAPHY
+   =================================== */
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    color: #2C5F4A;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #6B9080;
+}
+
+/* ===================================
+   LAYOUT UTILITIES
+   =================================== */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+section {
+    padding: 5rem 0;
+}
+
+/* ===================================
+   NAVIGATION
+   =================================== */
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.nav-logo img {
+    height: 40px;
+    width: auto;
+    display: block;
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.nav-toggle span {
+    width: 25px;
+    height: 3px;
+    background: #333333;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-link {
+    color: #333333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #2C5F4A;
+}
+
+.nav-cta {
+    padding: 0.5rem 1.5rem;
+    background: #2C5F4A;
+    color: #FFFFFF !important;
+    border-radius: 8px;
+}
+
+.nav-cta:hover {
+    background: #6B9080;
+}
+
+/* ===================================
+   BUTTONS
+   =================================== */
+
+.btn {
+    display: inline-block;
+    padding: 14px 32px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background: #2C5F4A;
+    color: #FFFFFF;
+}
+
+.btn-primary:hover {
+    background: #234a39; /* Darker Forest Green for better contrast */
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(44, 95, 74, 0.3);
+}
+
+.btn-large {
+    padding: 18px 40px;
+    font-size: 1.125rem;
+}
+
+/* ===================================
+   HERO SECTION
+   =================================== */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, #F5F1E8 0%, #FFFFFF 100%);
+    padding-top: 80px;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-headline {
+    font-size: 3rem;
+    margin-bottom: 24px; /* Headline → Subheadline spacing */
+    color: #333333;
+}
+
+.hero-subheadline {
+    font-size: 1.25rem;
+    color: #666666;
+    margin-bottom: 32px; /* Subheadline → CTA button spacing */
+    line-height: 1.8;
+}
+
+/* Hero CTA Stack - vertical layout */
+.hero-cta-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px; /* CTA button → Learn more link spacing */
+}
+
+/* Hero CTA Button */
+.btn-hero {
+    height: 52px;
+    padding: 0 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Learn More Link */
+.hero-learn-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px; /* Minimal gap - arrow very close to text */
+    color: #6B9080; /* Soft Sage */
+    font-size: 18px; /* Increased from 15px */
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.hero-learn-more:hover {
+    text-decoration: underline;
+    color: #5a7a6b; /* Soft Sage, slightly darker (10% darker) */
+}
+
+/* Arrow Icon - rotated to point down */
+.arrow-icon {
+    width: 90px; /* Very prominent arrow for strong visual cue */
+    height: 90px;
+    transform: rotate(90deg); /* Rotate from right-pointing to down-pointing */
+    transition: transform 0.3s ease;
+    flex-shrink: 0; /* Prevent arrow from shrinking */
+}
+
+.hero-learn-more:hover .arrow-icon {
+    transform: rotate(90deg) translateY(5px); /* More pronounced bounce with larger arrow */
+}
+
+/* ===================================
+   SECTION STYLES
+   =================================== */
+
+.section-headline {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333333;
+}
+
+.section-subheading {
+    text-align: center;
+    font-size: 1.25rem;
+    font-style: italic;
+    color: #6B9080;
+    margin-top: -1rem;
+    margin-bottom: 2rem;
+}
+
+.section-subheadline {
+    text-align: center;
+    font-size: 1.125rem;
+    color: #666666;
+    max-width: 700px;
+    margin: 0 auto 3rem;
+}
+
+.section-content {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.125rem;
+    line-height: 1.8;
+}
+
+.highlight-text {
+    font-size: 1.25rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* ===================================
+   PROBLEM SECTION
+   =================================== */
+
+.problem {
+    background: linear-gradient(135deg, rgba(44, 95, 74, 0.05) 0%, rgba(245, 241, 232, 0) 100%);
+}
+
+/* ===================================
+   BRAIN SECTION
+   =================================== */
+
+.brain-section {
+    background: #F5F1E8;
+}
+
+/* Brain illustrations container - side by side with arrow */
+.brain-illustrations-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 3rem auto;
+    max-width: 900px;
+}
+
+.brain-left,
+.brain-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Brain rage illustration - larger */
+.brain-illustration-rage {
+    max-width: 280px;
+    height: auto;
+    display: block;
+}
+
+/* Calm brain illustration - normal size */
+.brain-illustration-calm {
+    max-width: 200px;
+    height: auto;
+    display: block;
+}
+
+/* Arrow between brains */
+.brain-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.flow-arrow-svg {
+    display: block;
+}
+
+/* Callout box */
+.callout-box {
+    background: #FFFFFF;
+    border-left: 4px solid #2C5F4A;
+    padding: 1.5rem 2rem;
+    margin: 2rem 0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.callout-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.callout-icon-logo {
+    width: 56px;
+    height: 56px;
+    flex-shrink: 0;
+}
+
+.callout-box p {
+    margin: 0;
+}
+
+/* ===================================
+   SOLUTION SECTION
+   =================================== */
+
+.solution {
+    background: #F5F1E8; /* Warm Beige */
+}
+
+.how-it-works {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+    margin: 3rem 0;
+}
+
+.step {
+    text-align: center;
+    padding: 2rem;
+}
+
+.step-icon {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1.5rem;
+    background: #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.step-icon img {
+    width: 126px;
+    height: 126px;
+}
+
+.step h3 {
+    margin-bottom: 1rem;
+    color: #333333;
+}
+
+.step p {
+    color: #666666;
+    line-height: 1.7;
+}
+
+.features {
+    background: #FFFFFF;
+    padding: 1.5rem 2rem;
+    border-radius: 12px;
+    margin-top: 3rem;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.features h3 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.features-content-grid {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 3rem;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.features-illustration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.builtonscience-icon {
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+    display: block;
+}
+
+.features-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.features-list li {
+    padding: 0.75rem 0;
+    font-size: 1.125rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.arrow-bullet {
+    width: 96px;
+    height: 96px;
+    flex-shrink: 0;
+}
+
+.check {
+    color: #2C5F4A;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+/* ===================================
+   SCIENCE SECTION
+   =================================== */
+
+.science {
+    background: linear-gradient(135deg, #F5F1E8 0%, #FFFFFF 100%);
+}
+
+.intro-text {
+    text-align: center;
+    font-size: 1.125rem;
+    margin-bottom: 3rem;
+}
+
+.research-lead {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.6;
+    color: #333333;
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
+}
+
+.research-lead sup {
+    font-size: 0.8em;
+    color: #333333;
+}
+
+.powers-heading {
+    text-align: center;
+    font-size: 1.25rem;
+    color: #2C5F4A;
+    margin-bottom: 2rem;
+}
+
+.science-two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 2rem auto 3rem;
+}
+
+.science-column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Column heading with underline */
+.column-heading-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.column-heading {
+    font-size: 1.125rem;
+    color: #2C5F4A;
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+.column-underline {
+    width: 65%;
+    height: auto;
+    opacity: 0.6;
+    display: block;
+}
+
+/* Clean text list - no cards */
+.science-text-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.science-text-list p {
+    font-size: 1rem;
+    margin: 0;
+    color: #333333;
+    line-height: 1.7;
+}
+
+.science-text-list strong {
+    color: #2C5F4A;
+    font-weight: 600;
+}
+
+/* Scientific footnotes */
+.science-footnotes {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(44, 95, 74, 0.15);
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.references-heading {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #666666;
+    margin-bottom: 0.75rem;
+    text-transform: none;
+}
+
+.science-footnotes p {
+    font-size: 0.75rem;
+    line-height: 1.6;
+    color: #666666;
+    margin-bottom: 1rem;
+}
+
+.science-footnotes sup {
+    color: #2C5F4A;
+    font-weight: 600;
+    margin-right: 0.25rem;
+}
+
+.science-footnotes em {
+    font-style: italic;
+}
+
+.science-footnotes a {
+    color: #2C5F4A;
+    text-decoration: underline;
+}
+
+/* Animation - Initial state */
+.science-animate-left,
+.science-animate-right {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 250ms ease-out, transform 250ms ease-out;
+}
+
+.science-animate-left .column-underline,
+.science-animate-right .column-underline {
+    transform: scaleX(0.5);
+    transform-origin: center;
+    opacity: 0.3;
+    transition: transform 260ms ease-out, opacity 260ms ease-out;
+}
+
+/* Animation - Final state (triggered by JS) */
+.science-animate-left.animate-in,
+.science-animate-right.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.science-animate-left.animate-in .column-underline,
+.science-animate-right.animate-in .column-underline {
+    transform: scaleX(1);
+    opacity: 0.6;
+}
+
+/* Legacy styles - keeping for backwards compatibility */
+.approach {
+    background: #FFFFFF;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.approach h3 {
+    color: #2C5F4A;
+    margin-bottom: 1rem;
+}
+
+.research-text {
+    font-size: 1rem;
+    color: #666666;
+    font-style: italic;
+    margin-top: 2rem;
+}
+
+/* ===================================
+   RESULTS SECTION
+   =================================== */
+
+.results {
+    background: #F5F1E8;
+    text-align: center;
+}
+
+.results-intro {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    color: #333333;
+}
+
+.results-benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.results-benefits p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+    color: #333333;
+}
+
+.results-benefits strong {
+    color: #2C5F4A;
+    font-weight: 600;
+}
+
+.results-footer {
+    font-size: 1rem;
+    color: #666666;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.references-link {
+    color: #2C5F4A;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 2px solid #2C5F4A;
+    padding-bottom: 2px;
+    transition: all 0.2s ease;
+}
+
+.references-link:hover {
+    color: #6B9080;
+    border-bottom-color: #6B9080;
+}
+
+.references-link sup {
+    font-size: 0.7em;
+}
+
+/* ===================================
+   FOUNDER SECTION - Task 9 Redesign
+   =================================== */
+
+.founder-section {
+    position: relative;
+    background: #FFFFFF;
+    padding: 80px 60px;
+    overflow: hidden;
+}
+
+/* Organic background shape */
+.organic-background {
+    position: absolute;
+    top: 10%;
+    left: 8%;
+    width: 60%;
+    height: 70%;
+    background: rgba(107, 144, 128, 0.1); /* Soft Sage 10% */
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Road divider above heading */
+.road-divider-top {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 48px auto;
+    display: block;
+    opacity: 0.6;
+    position: relative;
+    z-index: 1;
+}
+
+/* Container */
+.founder-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* Main heading */
+.founder-heading {
+    font-size: 42px;
+    font-weight: 700;
+    color: #2C5F4A; /* Forest Green */
+    text-align: center;
+    margin-bottom: 48px;
+    line-height: 1.2;
+}
+
+/* Content grid - asymmetric layout */
+.founder-content-grid {
+    display: grid;
+    grid-template-columns: 58% 38%;
+    gap: 4%;
+    align-items: start;
+}
+
+/* Left column - Text */
+.founder-text p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+/* "Hi, I'm Jakob" greeting */
+.founder-greeting {
+    font-size: 28px;
+    font-weight: 600;
+    color: #6B9080; /* Soft Sage */
+    margin-bottom: 24px;
+    position: relative;
+}
+
+/* Hand-drawn underline under "Hi, I'm Jakob" */
+.founder-greeting::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 180px;
+    height: 12px;
+    background-image: url('../images/element_handdrawn_underline.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.6;
+}
+
+/* Mission statement - full width */
+.founder-mission {
+    max-width: 1000px;
+    margin: 60px auto 0 auto;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(91, 143, 163, 0.18) 0%, rgba(245, 241, 232, 0.5) 100%);
+    padding: 48px 60px;
+    border-radius: 16px;
+    border: 3px solid #5B8FA3;
+    position: relative;
+    box-shadow: 0 8px 24px rgba(91, 143, 163, 0.2);
+}
+
+.founder-mission::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 5px;
+    background: linear-gradient(90deg, #2C5F4A 0%, #5B8FA3 100%);
+    border-radius: 3px;
+}
+
+.founder-mission p {
+    margin: 0;
+    font-size: 22px;
+    line-height: 1.6;
+    color: #2C5F4A;
+    font-weight: 600;
+}
+
+/* Right column - Image + LinkedIn */
+.founder-image-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.founder-photo-container {
+    margin-bottom: 20px;
+}
+
+.founder-photo {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #6B9080; /* Soft Sage border */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    display: block;
+}
+
+/* LinkedIn link */
+.linkedin-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #6B9080;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.linkedin-link:hover {
+    color: #2C5F4A; /* Forest Green */
+    transform: translateY(-2px);
+}
+
+.linkedin-icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* ===================================
+   WAITLIST SECTION
+   =================================== */
+
+.waitlist {
+    background: linear-gradient(135deg, #2C5F4A 0%, #6B9080 100%);
+    color: #FFFFFF;
+}
+
+.waitlist .section-headline,
+.waitlist .section-subheadline {
+    color: #FFFFFF;
+}
+
+.waitlist-form {
+    max-width: 600px;
+    margin: 3rem auto 0;
+    background: #FFFFFF;
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333333;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    border: 2px solid #E8E8E8;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #2C5F4A;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.waitlist-form .btn {
+    width: 100%;
+}
+
+.form-success {
+    max-width: 600px;
+    margin: 3rem auto 0;
+    background: #FFFFFF;
+    padding: 3rem;
+    border-radius: 12px;
+    text-align: center;
+    color: #333333;
+}
+
+.form-success h3 {
+    color: #2C5F4A;
+    margin-bottom: 1rem;
+}
+
+/* ===================================
+   CONTACT SECTION
+   =================================== */
+
+.contact {
+    background: #F5F1E8;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 3rem auto 0;
+    background: #FFFFFF;
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form .btn {
+    width: 100%;
+}
+
+/* ===================================
+   FAQ SECTION
+   =================================== */
+
+.faq {
+    background: #F5F1E8;
+}
+
+.faq-list {
+    max-width: 800px;
+    margin: 3rem auto 0;
+}
+
+.faq-item {
+    background: #FFFFFF;
+    margin-bottom: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #2C5F4A;
+    transition: all 0.3s ease;
+}
+
+.faq-question:hover {
+    background: rgba(44, 95, 74, 0.05);
+}
+
+.faq-question span:first-child {
+    flex: 1;
+    padding-right: 1rem;
+}
+
+.faq-icon {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #2C5F4A;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0 2rem;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px;
+    padding: 0 2rem 1.5rem 2rem;
+}
+
+.faq-answer p {
+    color: #666666;
+    margin: 0;
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+/* ===================================
+   FOOTER
+   =================================== */
+
+.footer {
+    background: #333333;
+    color: #FFFFFF;
+    padding: 3rem 0 1rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.footer-col h4 {
+    color: #6B9080;
+    margin-bottom: 1rem;
+}
+
+.footer-col p {
+    color: #CCCCCC;
+    line-height: 1.7;
+}
+
+.footer-col a {
+    color: #FFFFFF;
+}
+
+.footer-col a:hover {
+    color: #6B9080;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background: #6B9080;
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-bottom p {
+    color: #CCCCCC;
+    margin: 0;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.footer-links a {
+    color: #CCCCCC;
+}
+
+.footer-links span {
+    color: #666666;
+}
+
+/* ===================================
+   RESPONSIVE DESIGN - MOBILE FIRST
+   =================================== */
+
+@media (max-width: 768px) {
+    /* Typography */
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    section {
+        padding: 3rem 0;
+    }
+
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    /* Navigation */
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        flex-direction: column;
+        background: #FFFFFF;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        padding: 2rem 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    /* Hero */
+    .hero {
+        min-height: auto;
+        padding: 6rem 0 4rem;
+    }
+
+    .hero-headline {
+        font-size: 2rem;
+    }
+
+    .hero-subheadline {
+        font-size: 1.125rem;
+        margin-bottom: 28px; /* Slightly reduce spacing on mobile */
+    }
+
+    /* Hero CTA Stack - mobile */
+    .hero-cta-stack {
+        gap: 14px; /* Slightly reduce gap on mobile */
+    }
+
+    .btn-hero {
+        height: 48px; /* Slightly smaller on mobile */
+        padding: 0 20px;
+        font-size: 1rem;
+    }
+
+    .hero-learn-more {
+        font-size: 16px; /* Increased from 14px */
+        gap: 3px; /* Minimal gap on mobile - arrow very close to text */
+    }
+
+    .arrow-icon {
+        width: 60px; /* Very prominent arrow on mobile too */
+        height: 60px;
+    }
+
+    /* Sections */
+    .section-content {
+        font-size: 1rem;
+    }
+
+    .how-it-works {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .step-icon {
+        width: 100px;
+        height: 100px;
+    }
+
+    .step-icon img {
+        width: 88px;
+        height: 88px;
+    }
+
+    .arrow-bullet {
+        width: 60px;
+        height: 60px;
+    }
+
+    .science-two-columns {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .column-underline {
+        width: 50%;
+    }
+
+    .science-footnotes {
+        margin-top: 2rem;
+        padding-top: 1rem;
+    }
+
+    .references-heading {
+        font-size: 0.7rem;
+    }
+
+    .science-footnotes p {
+        font-size: 0.7rem;
+    }
+
+    .features-content-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .builtonscience-icon {
+        max-width: 200px;
+    }
+
+    .features h3 {
+        margin-bottom: 1rem;
+    }
+
+    .features {
+        padding: 1.25rem 1.5rem;
+    }
+
+    .features-list li {
+        font-size: 1rem;
+    }
+
+    /* Founder Section - Mobile */
+    .founder-section {
+        padding: 60px 24px;
+    }
+
+    .founder-heading {
+        font-size: 32px;
+        margin-bottom: 36px;
+    }
+
+    .founder-content-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    /* Image column first on mobile */
+    .founder-image-column {
+        order: -1;
+        text-align: center;
+    }
+
+    .founder-photo {
+        width: 180px;
+        height: 180px;
+    }
+
+    /* Organic background - smaller on mobile */
+    .organic-background {
+        width: 80%;
+        height: 50%;
+        top: 15%;
+        left: 10%;
+    }
+
+    /* Shorter underline on mobile */
+    .founder-greeting::after {
+        width: 140px;
+    }
+
+    .founder-mission {
+        margin-top: 40px;
+        padding: 32px 24px;
+    }
+
+    .founder-mission p {
+        font-size: 18px;
+    }
+
+    /* Waitlist Form */
+    .waitlist-form {
+        padding: 2rem 1.5rem;
+    }
+
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-headline {
+        font-size: 1.75rem;
+    }
+
+    .btn-large {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+}
+
+/* ===================================
+   ANIMATIONS & TRANSITIONS
+   =================================== */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* Smooth appearance for sections on scroll */
+section {
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* ===================================
+   DESIGN ELEMENTS - ZEN WAVES & DIVIDERS
+   =================================== */
+
+/* Zen waves divider between sections */
+.zen-waves-container {
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    line-height: 0; /* Remove extra space below SVG */
+    margin-top: -1px; /* Remove any gap from previous section */
+    margin-bottom: -1px; /* Remove any gap to next section */
+}
+
+.zen-waves-divider {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+    padding: 0;
+    min-width: 100%; /* Ensure full width coverage */
+}
+
+/* Road Horizon Divider */
+.road-divider-container {
+    width: 100%;
+    padding: 60px 0;
+    text-align: center;
+    background: #F5F1E8; /* Warm Beige */
+    overflow: hidden;
+}
+
+.road-divider {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    opacity: 0.5;
+    min-width: 100%; /* Ensure full width coverage */
+}
+
+/* ===================================
+   BREATHING CIRCLES - BACKGROUND ELEMENTS
+   =================================== */
+
+/* Hero Section - add position relative */
+.hero-section {
+    position: relative;
+}
+
+/* Breathing circles in hero */
+.breathing-circles-hero {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    width: 400px;
+    height: 400px;
+    background-image: url('../images/icon_breathing.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Hero content on top */
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* Brain content container */
+.brain-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* Founder Section - breathing circles */
+.founder-mission {
+    position: relative;
+}
+
+.founder-mission::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -100px;
+    transform: translateY(-50%);
+    width: 200px;
+    height: 200px;
+    background-image: url('../images/icon_breathing.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.08;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* ===================================
+   RESPONSIVE - DESIGN ELEMENTS
+   =================================== */
+
+@media (max-width: 768px) {
+    .road-divider-container {
+        padding: 40px 0;
+    }
+
+    .road-divider {
+        opacity: 0.6; /* Slightly more visible on mobile */
+    }
+
+    .breathing-circles-hero {
+        width: 250px;
+        height: 250px;
+        right: 5%;
+        opacity: 0.2;
+    }
+
+    .founder-mission::before {
+        display: none; /* Hide on mobile */
+    }
+
+    /* Brain Section - Mobile */
+    .brain-illustrations-container {
+        flex-direction: column;
+        gap: 2rem;
+        margin: 2rem auto;
+    }
+
+    .brain-illustration-rage {
+        max-width: 220px;
+    }
+
+    .brain-illustration-calm {
+        max-width: 180px;
+    }
+
+    .brain-arrow {
+        transform: rotate(90deg);
+    }
+
+    .callout-icon-logo {
+        width: 44px;
+        height: 44px;
+    }
+}
+
+/* ===================================
+   LEGAL PAGES (TERMS & PRIVACY)
+   =================================== */
+
+.legal-content {
+    background: #FFFFFF;
+    padding: 4rem 0;
+}
+
+.legal-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2C5F4A;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.legal-updated {
+    text-align: center;
+    color: #666666;
+    font-size: 0.95rem;
+    margin-bottom: 3rem;
+}
+
+.legal-text {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+    color: #333333;
+}
+
+.legal-text h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2C5F4A;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.legal-text p {
+    margin-bottom: 1.25rem;
+    font-size: 1rem;
+}
+
+.legal-text ul {
+    margin: 1rem 0 1.5rem 2rem;
+    list-style-type: disc;
+}
+
+.legal-text li {
+    margin-bottom: 0.5rem;
+    line-height: 1.7;
+}
+
+.legal-text strong {
+    font-weight: 600;
+    color: #2C5F4A;
+}
+
+.legal-text em {
+    font-style: italic;
+}
+
+/* Legal Pages - Mobile */
+@media (max-width: 768px) {
+    .legal-content {
+        padding: 3rem 0;
+    }
+
+    .legal-title {
+        font-size: 1.75rem;
+    }
+
+    .legal-text {
+        padding: 0 1.5rem;
+    }
+
+    .legal-text h2 {
+        font-size: 1.25rem;
+        margin-top: 2rem;
+    }
+
+    .legal-text ul {
+        margin-left: 1.5rem;
+    }
+}

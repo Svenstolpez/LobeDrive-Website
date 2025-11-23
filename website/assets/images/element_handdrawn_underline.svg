@@ -1,0 +1,14 @@
+<svg width="200" height="16" viewBox="0 0 200 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M2 8 Q 50 6, 100 8 T 198 8"
+        stroke="#6B9080"
+        stroke-width="2.5"
+        stroke-linecap="round"
+        fill="none"
+        opacity="0.6"/>
+  <path d="M4 12 Q 52 10, 102 12 T 196 12"
+        stroke="#6B9080"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        fill="none"
+        opacity="0.3"/>
+</svg>

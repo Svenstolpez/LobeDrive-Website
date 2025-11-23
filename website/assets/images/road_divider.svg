@@ -1,0 +1,21 @@
+<svg width="1600" height="120" viewBox="0 0 1600 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Upper soft horizon line -->
+  <path d="
+      M0 40
+      Q400 25, 800 40
+      T1600 40" stroke="#6B9080" stroke-width="3" stroke-linecap="round" opacity="0.45" fill="none"></path>
+
+  <!-- Main road divider -->
+  <path d="
+      M0 60
+      Q400 45, 800 60
+      T1600 60" stroke="#2C5F4A" stroke-width="4" stroke-linecap="round" opacity="0.9" fill="none"></path>
+
+  <!-- Base echo line -->
+  <path d="
+      M0 80
+      Q400 65, 800 80
+      T1600 80" stroke="#A4B0A8" stroke-width="2.5" stroke-linecap="round" opacity="0.35" fill="none"></path>
+
+</svg>

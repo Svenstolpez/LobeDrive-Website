@@ -1,0 +1,24 @@
+<svg width="1000" height="1000" viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Outer Ensō -->
+  <path d="M130 15 C60 25, 20 75, 20 140 C20 200, 65 245, 130 250 C180 250, 240 215, 245 155 C250 110, 220 60, 180 40" stroke="#2C5F4A" stroke-width="8" stroke-linecap="round" stroke-dasharray="230 40" opacity="0.55" fill="none"></path>
+
+  <!-- Inner Ensō -->
+  <path d="M130 40 C80 50, 45 95, 45 140 C45 180, 80 220, 130 225 C170 225, 210 195, 220 155 C228 125, 220 95, 200 70" stroke="#6B9080" stroke-width="4" stroke-linecap="round" stroke-dasharray="160 30" opacity="0.35" fill="none"></path>
+
+  <!-- Brain core -->
+  <path d="M85 150 C85 115, 125 95, 140 120 C155 95, 195 115, 195 150 C195 175, 155 190, 140 165 C125 190, 85 175, 85 150" stroke="#A4B0A8" stroke-width="2.2" fill="none"></path>
+
+  <!-- Amygdala -->
+  <circle cx="130" cy="160" r="14" fill="#D4A574"></circle>
+  <circle cx="130" cy="160" r="22" stroke="#D4A574" stroke-width="1.7" opacity="0.35" stroke-dasharray="5 5" fill="none"></circle>
+
+  <!-- Frontal lobe -->
+  <circle cx="165" cy="125" r="15" fill="#2C5F4A"></circle>
+  <circle cx="165" cy="125" r="24" stroke="#6B9080" stroke-width="1.7" opacity="0.35" fill="none"></circle>
+
+  <!-- Intervention arrow -->
+  <path d="M155 133 Q140 150, 133 157" stroke="#6B9080" stroke-width="4" stroke-linecap="round" fill="none"></path>
+  <path d="M133 157 L138 153 M133 157 L138 161" stroke="#6B9080" stroke-width="4" stroke-linecap="round"></path>
+
+</svg>

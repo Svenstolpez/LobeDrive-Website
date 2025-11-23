@@ -1,0 +1,13 @@
+<svg width="1200" height="80" viewBox="0 0 1200 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Upper wave -->
+  <path d="M0 30
+           C150 10, 300 10, 450 30
+           C600 50, 750 50, 900 30
+           C1050 10, 1200 10, 1350 30" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.7"></path>
+
+  <!-- Lower wave (slightly offset) -->
+  <path d="M0 50
+           C150 30, 300 30, 450 50
+           C600 70, 750 70, 900 50
+           C1050 30, 1200 30, 1350 50" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.4"></path>
+</svg>

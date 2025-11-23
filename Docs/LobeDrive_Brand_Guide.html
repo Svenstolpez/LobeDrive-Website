@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LobeDrive Brand Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --forest-green: #2C5F4A;
+            --soft-sage: #6B9080;
+            --warm-beige: #F5F1E8;
+            --white: #FFFFFF;
+            --light-gray: #E8E8E8;
+            --warm-gray: #A4B0A8;
+            --charcoal: #333333;
+            --calm-blue: #5B8FA3;
+            --success-green: #7FA880;
+            --soft-warning: #D4A574;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--charcoal);
+            background: var(--white);
+        }
+        
+        /* Print styles */
+        @media print {
+            body {
+                background: white;
+            }
+            .page-break {
+                page-break-before: always;
+            }
+            .no-print {
+                display: none;
+            }
+        }
+        
+        /* Cover Page */
+        .cover {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--forest-green) 0%, var(--soft-sage) 100%);
+            color: white;
+            text-align: center;
+            padding: 40px;
+        }
+        
+        .cover-logo {
+            margin-bottom: 60px;
+        }
+        
+        .cover h1 {
+            font-size: 72px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            letter-spacing: -1px;
+        }
+        
+        .cover .tagline {
+            font-size: 24px;
+            font-weight: 400;
+            opacity: 0.9;
+            margin-bottom: 60px;
+        }
+        
+        .cover .version {
+            font-size: 14px;
+            opacity: 0.7;
+            margin-top: 40px;
+        }
+        
+        /* Content Pages */
+        .page {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 60px;
+            min-height: 100vh;
+        }
+        
+        .page-header {
+            margin-bottom: 60px;
+            padding-bottom: 24px;
+            border-bottom: 3px solid var(--forest-green);
+        }
+        
+        .page-number {
+            font-size: 14px;
+            color: var(--warm-gray);
+            margin-bottom: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        h1 {
+            font-size: 56px;
+            font-weight: 700;
+            color: var(--forest-green);
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+        
+        h2 {
+            font-size: 36px;
+            font-weight: 600;
+            color: var(--forest-green);
+            margin: 48px 0 24px 0;
+        }
+        
+        h3 {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--charcoal);
+            margin: 32px 0 16px 0;
+        }
+        
+        p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--charcoal);
+            margin-bottom: 20px;
+        }
+        
+        .lead {
+            font-size: 20px;
+            line-height: 1.7;
+            color: var(--soft-sage);
+            font-weight: 500;
+            margin-bottom: 40px;
+        }
+        
+        /* Story Section */
+        .story-section {
+            background: var(--warm-beige);
+            padding: 48px;
+            border-radius: 16px;
+            margin: 40px 0;
+        }
+        
+        .story-section h3 {
+            color: var(--forest-green);
+            margin-top: 32px;
+        }
+        
+        .story-section h3:first-child {
+            margin-top: 0;
+        }
+        
+        .quote {
+            font-style: italic;
+            color: var(--soft-sage);
+            font-size: 18px;
+            padding-left: 24px;
+            border-left: 4px solid var(--soft-sage);
+            margin: 24px 0;
+        }
+        
+        /* Color Palette */
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin: 40px 0;
+        }
+        
+        .color-card {
+            background: white;
+            border: 1px solid var(--light-gray);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        
+        .color-swatch {
+            height: 140px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        .color-info {
+            padding: 20px;
+        }
+        
+        .color-name {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        
+        .color-code {
+            font-family: 'Courier New', monospace;
+            background: var(--warm-beige);
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 13px;
+            display: inline-block;
+            margin: 4px 4px 4px 0;
+        }
+        
+        /* Logo Section */
+        .logo-showcase {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            margin: 40px 0;
+        }
+        
+        .logo-box {
+            background: var(--warm-beige);
+            border-radius: 12px;
+            padding: 48px;
+            text-align: center;
+        }
+        
+        .logo-box h3 {
+            margin-top: 24px;
+            margin-bottom: 12px;
+        }
+        
+        .logo-box p {
+            font-size: 14px;
+            color: var(--warm-gray);
+        }
+        
+        /* Usage Guidelines */
+        .guidelines {
+            background: white;
+            border: 2px solid var(--light-gray);
+            border-radius: 12px;
+            padding: 32px;
+            margin: 40px 0;
+        }
+        
+        .guidelines h3 {
+            color: var(--forest-green);
+            margin-top: 0;
+        }
+        
+        .do-dont-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            margin: 32px 0;
+        }
+        
+        .do-box, .dont-box {
+            padding: 24px;
+            border-radius: 8px;
+        }
+        
+        .do-box {
+            background: rgba(127, 168, 128, 0.1);
+            border: 2px solid var(--success-green);
+        }
+        
+        .dont-box {
+            background: rgba(212, 165, 116, 0.1);
+            border: 2px solid var(--soft-warning);
+        }
+        
+        .do-box h4 {
+            color: var(--success-green);
+            margin-bottom: 12px;
+        }
+        
+        .dont-box h4 {
+            color: var(--soft-warning);
+            margin-bottom: 12px;
+        }
+        
+        ul {
+            list-style-position: inside;
+            color: var(--charcoal);
+            line-height: 1.8;
+        }
+        
+        /* Design Elements */
+        .elements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 32px;
+            margin: 40px 0;
+        }
+        
+        .element-card {
+            background: white;
+            border: 1px solid var(--light-gray);
+            border-radius: 12px;
+            padding: 32px;
+            text-align: center;
+        }
+        
+        .element-preview {
+            background: var(--warm-beige);
+            border-radius: 8px;
+            padding: 32px;
+            margin-bottom: 20px;
+            min-height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* Typography */
+        .type-example {
+            background: white;
+            border: 1px solid var(--light-gray);
+            border-radius: 8px;
+            padding: 32px;
+            margin: 24px 0;
+        }
+        
+        .type-label {
+            font-size: 12px;
+            color: var(--warm-gray);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+        
+        .h1-example {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--forest-green);
+        }
+        
+        .h2-example {
+            font-size: 36px;
+            font-weight: 600;
+            color: var(--charcoal);
+        }
+        
+        .body-example {
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--charcoal);
+        }
+        
+        /* Footer */
+        .page-footer {
+            margin-top: 80px;
+            padding-top: 32px;
+            border-top: 1px solid var(--light-gray);
+            text-align: center;
+            color: var(--warm-gray);
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <!-- COVER PAGE -->
+    <div class="cover">
+        <div class="cover-logo">
+            <svg width="300" height="80" viewBox="0 0 300 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="45" cy="40" r="28" stroke="white" stroke-width="4" stroke-linecap="round" stroke-dasharray="155 20" fill="none" opacity="0.9"/>
+                <line x1="45" y1="20" x2="45" y2="60" stroke="white" stroke-width="2.5" opacity="0.5"/>
+                <line x1="25" y1="40" x2="65" y2="40" stroke="white" stroke-width="2.5" opacity="0.5"/>
+                <circle cx="45" cy="40" r="3" fill="white"/>
+                <text x="85" y="52" font-family="Inter, sans-serif" font-size="38" font-weight="700" fill="white">LobeDrive</text>
+            </svg>
+        </div>
+        
+        <h1>Brand Guide</h1>
+        <p class="tagline">Visual Identity & Design Philosophy</p>
+        
+        <div style="margin-top: 60px; opacity: 0.7;">
+            <p>Use your lobe. Drive smarter.</p>
+        </div>
+        
+        <p class="version">Version 1.0 • November 2025</p>
+    </div>
+
+    <!-- TABLE OF CONTENTS -->
+    <div class="page page-break">
+        <div class="page-header">
+            <div class="page-number">Contents</div>
+            <h1>Inside This Guide</h1>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 40px;">
+            <div>
+                <h3 style="color: var(--forest-green);">01 — Brand Story</h3>
+                <p>The philosophy behind our visual identity</p>
+                
+                <h3 style="color: var(--forest-green); margin-top: 32px;">02 — Color Palette</h3>
+                <p>Our carefully chosen colors and their meaning</p>
+                
+                <h3 style="color: var(--forest-green); margin-top: 32px;">03 — Logo</h3>
+                <p>The Zen Wheel and how to use it</p>
+            </div>
+            
+            <div>
+                <h3 style="color: var(--forest-green);">04 — Typography</h3>
+                <p>Fonts, sizes, and hierarchy</p>
+                
+                <h3 style="color: var(--forest-green); margin-top: 32px;">05 — Design Elements</h3>
+                <p>Icons, patterns, and visual motifs</p>
+                
+                <h3 style="color: var(--forest-green); margin-top: 32px;">06 — Applications</h3>
+                <p>Real-world usage examples</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- BRAND STORY -->
+    <div class="page page-break">
+        <div class="page-header">
+            <div class="page-number">01 — Brand Story</div>
+            <h1>A Story About Calm in Chaos</h1>
+            <p class="lead">Every design choice in LobeDrive serves a psychological purpose</p>
+        </div>
+        
+        <div class="story-section">
+            <h2 style="margin-top: 0;">The Colors: From Forest to Road</h2>
+            
+            <p><strong>It began with an observation:</strong> When we feel anger behind the wheel, we're trapped in a metal box, surrounded by asphalt, engines, and steel. Everything is hard. Everything is angular. Everything screams "conflict."</p>
+            
+            <p>But what happens when you park the car and walk into a forest?</p>
+            
+            <p>Your shoulders drop. Your breathing deepens. Your pulse slows. This isn't coincidence—it's biology. Green lowers cortisol levels. Nature activates the parasympathetic nervous system. We are <em>designed</em> to be calmed by these tones.</p>
+            
+            <p class="quote">"Forest Green is not just a color—it's a reminder that we are biological beings, not machines."</p>
+            
+            <p><strong>Forest Green (#2C5F4A)</strong> is more than aesthetic. When anger rises and thoughts race, this deep, mature green tone says: <em>"You are bigger than this. You are nature. You can choose."</em></p>
+            
+            <p><strong>Soft Sage (#6B9080)</strong> is what happens when the forest meets light. It's the first breath after a stormy day. It's the space between impulse and action. It's the gentle transition from "I must react NOW" to "I can pause for a second."</p>
+            
+            <p><strong>Warm Beige (#F5F1E8)</strong> is the color of earth. Of sand. Of stability. Not sterile white—that would be too clinical, too hospital-like. Not gray—that would be too bleak. But warm, earthy beige that says: <em>"This is human. You're not broken. You're normal."</em></p>
+        </div>
+        
+        <div class="story-section">
+            <h2 style="margin-top: 0;">The Shape: The Incomplete Circle</h2>
+            
+            <p>In Japanese Zen philosophy, there is <strong>Ensō</strong>—the incomplete circle drawn in a single brushstroke. It's never perfect. It's never "finished." And that's where its strength lies.</p>
+            
+            <p>We chose Ensō for LobeDrive's logo for three reasons:</p>
+            
+            <h3>1. Breathing is Circular</h3>
+            <p>In... out. In... out. Every breath is a cycle. When we get angry, we stop breathing properly—we hold our breath, we take short gasps. The circle reminds us: <em>return to the rhythm.</em></p>
+            
+            <h3>2. Control is an Illusion</h3>
+            <p>The incomplete circle acknowledges: we don't control traffic. We don't control other drivers. We don't control weather, delays, or accidents. But we can control <em>our response.</em> The opening in the circle is the space for our own agency.</p>
+            
+            <h3>3. The Process is the Goal</h3>
+            <p>LobeDrive doesn't promise you'll never get angry in traffic again. That would be a lie. Instead, we offer a <em>practice</em>. An exercise you repeat. Every time you press the button, every time you breathe, every time you choose calm over escalation—you strengthen the mental muscle that makes it easier next time.</p>
+            
+            <p class="quote">Ensō is never perfect. You don't need to be perfect either.</p>
+        </div>
+        
+        <div class="story-section">
+            <h2 style="margin-top: 0;">The Steering Wheel: Where Circle Becomes Tool</h2>
+            
+            <p>When Ensō gets spokes, it becomes a steering wheel. And suddenly we have a double metaphor:</p>
+            
+            <p><strong>You hold the wheel = You have control</strong><br>
+            Not over traffic. Over yourself. Over your response. Over your actions.</p>
+            
+            <p>The wheel symbolism reinforces: <em>"This is a tool for drivers. Not a meditation app you use at home. This is for the situation, in the moment, when you actually need it."</em></p>
+        </div>
+    </div>
+
+    <!-- DESIGN ELEMENTS PHILOSOPHY -->
+    <div class="page page-break">
+        <div class="page-header">
+            <div class="page-number">01 — Brand Story (continued)</div>
+            <h1>The Graphic Elements: Symbols That Work</h1>
+        </div>
+        
+        <div class="story-section">
+            <h3>The Waves</h3>
+            <p>Three gentle waves, like breathing.<br>
+            In (the first wave rises).<br>
+            Pause (the space between).<br>
+            Out (the wave falls).</p>
+            
+            <p>They're not sharp, not angular. They're organic. They move. Just like emotions—they come, they peak, they pass.</p>
+        </div>
+        
+        <div class="story-section">
+            <h3>The Road with Perspective</h3>
+            <p>The horizon line, road markings disappearing into the distance.</p>
+            
+            <p>It's easy to focus on <em>that idiot</em> in front of you right now. But when you lift your gaze, when you see the horizon, you see the bigger picture. <em>Where am I going? Why am I driving? What matters—reacting to this second's irritation, or arriving in one piece?</em></p>
+            
+            <p>Perspective breaks fixation.</p>
+        </div>
+        
+        <div class="story-section">
+            <h3>The Breathing Circle</h3>
+            <p>Concentric circles emanating from the center.</p>
+            
+            <p>This is what breathing would look like if you could visualize it. An epicenter of calm spreading outward. From the chest, through the body, out to fingertips and toes.</p>
+            
+            <p>The center point—focus. Everything else—expansion.</p>
+        </div>
+        
+        <div class="story-section">
+            <h2 style="margin-top: 48px;">The Psychology in Every Choice</h2>
+            
+            <p>Nothing in LobeDrive's visual identity is random. Everything works toward the same goal:</p>
+            
+            <p class="quote" style="font-size: 20px; font-weight: 600;">To lower autonomic nervous system activation.</p>
+            
+            <p>When you see Forest Green, the "threat!" system doesn't activate—quite the opposite.<br>
+            When you see soft curves (instead of sharp edges), "conflict!" patterns don't activate.<br>
+            When you see an incomplete circle, you don't see "failure"—you see "process in progress."</p>
+            
+            <p>Every color choice, every shape, every graphic element is designed to signal to your brain <em>before you even use the app</em>:</p>
+            
+            <p class="quote">"This is a safe place. This is calm. This helps me."</p>
+        </div>
+        
+        <div class="story-section">
+            <h2 style="margin-top: 48px;">Summary: Design as Psychological Intervention</h2>
+            
+            <p>LobeDrive isn't just an app with good graphics. The graphics <em>are</em> the intervention.</p>
+            
+            <p>Before you even hear an audio message, before you even press the button, your brain has already registered:<br>
+            Green = safety, nature, calm.<br>
+            Soft shapes = no danger, no conflict.<br>
+            Circle = cycle, process, breathing.<br>
+            Incomplete = human, accepting, non-perfectionist.</p>
+            
+            <p>When you then press the button and hear the message, the design has already prepared the ground. You're receptive. Your amygdala has already received a signal: <em>"This is not a threat. This is help."</em></p>
+            
+            <p><strong>That's the difference between design that "looks nice" and design that <em>does something.</em></strong></p>
+        </div>
+    </div>
+
+    <!-- COLOR PALETTE -->
+    <div class="page page-break">
+        <div class="page-header">
+            <div class="page-number">02 — Color Palette</div>
+            <h1>Our Colors</h1>
+            <p class="lead">Each color chosen for its psychological impact</p>
+        </div>
+        
+        <h2>Primary Colors</h2>
+        <p>The foundation of our brand—use these colors most prominently.</p>
+        
+        <div class="color-grid">
+            <div class="color-card">
+                <div class="color-swatch" style="background: #2C5F4A; color: white;">
+                    Forest Green
+                </div>
+                <div class="color-info">
+                    <div class="color-name">Forest Green</div>
+                    <div class="color-code">#2C5F4A</div>
+                    <div class="color-code">RGB 44, 95, 74</div>
+                    <p style="margin-top: 12px; font-size: 14px; color: #666;">Primary brand color. Use for logos, headings, buttons, and key UI elements. Represents nature, calm, and control.</p>
+                </div>
+            </div>
+            
+            <div class="color-card">
+                <div class="color-swatch" style="background: #6B9080; color: white;">
+                    Soft Sage
+                </div>
+                <div class="color-info">
+                    <div class="color-name">Soft Sage</div>
+                    <div class="color-code">#6B9080</div>
+                    <div class="color-code">RGB 107, 144, 128</div>
+                    <p style="margin-top: 12px; font-size: 14px; color: #666;">Secondary brand color. Use for accents, icons, and supporting elements. Represents transition and breathing.</p>
+                </div>
+            </div>
+        </div>
+        
+        <h2 style="margin-top: 60px;">Neutral Colors</h2>
+        <p>Background and text colors that support without overwhelming.</p>
+        
+        <div class="color-grid">
+            <div class="color-card">
+                <div class="color-swatch" style="background: #F5F1E8; color: #333;">
+                    Warm Beige
+                </div>
+                <div class="color-info">
+                    <div class="color-name">Warm Beige</div>
+                    <div class="color-code">#F5F1E8</div>
+                    <div class="color-code">RGB 245, 241, 232</div>
+                    <p style="margin-top: 12px; font-size: 14px; color: #666;">Main background color. Warm and welcoming, never sterile.</p>
+                </div>
+            </div>
+            
+            <div class="color-card">
+                <div class="color-swatch" style="background: #FFFFFF; color: #333; border: 1px solid #E8E8E8;">
+                    White
+                </div>
+                <div class="color-info">
+                    <div class="color-name">White</div>
+                    <div class="color-code">#FFFFFF</div>
+                    <div class="color-code">RGB 255, 255, 255</div>
+                    <p style="margin-top: 12px; font-size: 14px; color: #666;">Clean backgrounds, cards, and contrast.</p>
+                </div>
+            </div>
+            
+            <div class="color-card">
+                <div class="color-swatch" style="background: #A4B0A8; color: white;">
+                    Warm Gray
+                </div>
+                <div class="color-info">
+                    <div class="color-name">Warm Gray</div>
+                    <div class="color-code">#A4B0A8</div>
+                    <div class="color-code">RGB 164, 176, 168</div>
+                    <p style="margin-top: 12px; font-size: 14px; color: #666;">Secondary text, icons, inactive states.</p>
+                </div>
+            </div>
+            
+            <div class="color-card">
+                <div class="color-swatch" style="background: #333333; color: white;">
+                    Charcoal
+                </div>
+                <div class="color-info">
+                    <div class="color-name">Charcoal</div>
+                    <div class="color-code">#333333</div>
+                    <div class="color-code">RGB 51, 51, 51</div>
+                    <p style="margin-top: 12px; font-size: 14px; color: #666;">Main body text and high-contrast elements.</p>
+                </div>
+            </div>
+        </div>
+        
+        <h2 style="margin-top: 60px;">Accent & Signal Colors</h2>
+        <p>Use sparingly for feedback and specific UI states.</p>
+        
+        <div class="color-grid">
+            <div class="color-card">
+                <div class="color-swatch" style="background: #5B8FA3; color: white;">
+                    Calm Blue
+                </div>
+                <div class="color-info">
+                    <div class="color-name">Calm Blue</div>
+                    <div class="color-code">#5B8FA3</div>
+                    <div class="color-code">RGB 91, 143, 163</div>
+                    <p style="margin-top: 12px; font-size: 14px; color: #666;">Information messages, links, neutral notifications.</p>
+                </div>
+            </div>
+            
+            <div class="color-card">
+                <div class="color-swatch" style="background: #7FA880; color: white;">
+                    Success Green
+                </div>
+                <div class="color-info">
+                    <div class="color-name">Success Green</div>
+                    <div class="color-code">#7FA880</div>
+                    <div class="color-code">RGB 127, 168, 128</div>
+                    <p style="margin-top: 12px; font-size: 14px; color: #666;">Success confirmations, positive feedback.</p>
+                </div>
+            </div>
+            
+            <div class="color-card">
+                <div class="color-swatch" style="background: #D4A574; color: white;">
+                    Soft Warning
+                </div>
+                <div class="color-info">
+                    <div class="color-name">Soft Warning</div>
+                    <div class="color-code">#D4A574</div>
+                    <div class="color-code">RGB 212, 165, 116</div>
+                    <p style="margin-top: 12px; font-size: 14px; color: #666;">Gentle warnings and cautions (not alarming).</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- LOGO -->
+    <div class="page page-break">
+        <div class="page-header">
+            <div class="page-number">03 — Logo</div>
+            <h1>The Zen Wheel</h1>
+            <p class="lead">Our primary brand mark: Ensō circle meets steering wheel</p>
+        </div>
+        
+        <h2>Primary Logo</h2>
+        <p>Use this version for most applications—websites, presentations, business cards.</p>
+        
+        <div style="background: var(--warm-beige); padding: 60px; border-radius: 12px; text-align: center; margin: 40px 0;">
+            <svg width="300" height="75" viewBox="0 0 300 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="45" cy="37.5" r="27" stroke="#2C5F4A" stroke-width="4.5" stroke-linecap="round" stroke-dasharray="150 19.5" fill="none" opacity="0.9"/>
+                <line x1="45" y1="25.5" x2="45" y2="49.5" stroke="#6B9080" stroke-width="2.25" opacity="0.5"/>
+                <line x1="33" y1="37.5" x2="57" y2="37.5" stroke="#6B9080" stroke-width="2.25" opacity="0.5"/>
+                <text x="87" y="49.5" font-family="Inter, sans-serif" font-size="42" font-weight="700" fill="#2C5F4A">LobeDrive</text>
+            </svg>
+        </div>
+        
+        <h2>Icon Version</h2>
+        <p>Use for app icons, favicons, social media avatars, and small sizes.</p>
+        
+        <div style="background: var(--warm-beige); padding: 60px; border-radius: 12px; text-align: center; margin: 40px 0;">
+            <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="60" cy="60" r="42" stroke="#2C5F4A" stroke-width="6" stroke-linecap="round" stroke-dasharray="233 30" fill="none" opacity="0.9"/>
+                <line x1="60" y1="30" x2="60" y2="90" stroke="#6B9080" stroke-width="3.75" opacity="0.5"/>
+                <line x1="30" y1="60" x2="90" y2="60" stroke="#6B9080" stroke-width="3.75" opacity="0.5"/>
+                <circle cx="60" cy="60" r="4.5" fill="#2C5F4A"/>
+            </svg>
+        </div>
+        
+        <div class="guidelines">
+            <h3>Logo Usage Guidelines</h3>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 24px;">
+                <div>
+                    <h4 style="color: var(--forest-green); margin-bottom: 12px;">Minimum Sizes</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 8px;">📱 <strong>Digital:</strong> 120px width minimum</li>
+                        <li style="margin-bottom: 8px;">🖨️ <strong>Print:</strong> 1 inch (2.54 cm) width</li>
+                        <li style="margin-bottom: 8px;">🌐 <strong>Website:</strong> 150-200px recommended</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 style="color: var(--forest-green); margin-bottom: 12px;">Clear Space</h4>
+                    <p>Maintain padding equal to the height of the circle around the logo. No other elements should enter this space.</p>
+                </div>
+            </div>
+            
+            <h4 style="color: var(--forest-green); margin-top: 32px; margin-bottom: 12px;">Approved Backgrounds</h4>
+            <div style="display: flex; gap: 16px; margin-bottom: 24px;">
+                <div style="background: white; padding: 24px; border: 1px solid var(--light-gray); border-radius: 8px; flex: 1; text-align: center;">
+                    <div style="font-size: 12px; color: var(--warm-gray); margin-bottom: 8px;">White</div>
+                    <svg width="80" height="25" viewBox="0 0 80 25"><circle cx="12.5" cy="12.5" r="9" stroke="#2C5F4A" stroke-width="1.5" stroke-dasharray="50 7" fill="none"/><text x="28" y="17" font-family="Inter" font-size="11" font-weight="700" fill="#2C5F4A">LobeDrive</text></svg>
+                </div>
+                <div style="background: var(--warm-beige); padding: 24px; border-radius: 8px; flex: 1; text-align: center;">
+                    <div style="font-size: 12px; color: var(--warm-gray); margin-bottom: 8px;">Warm Beige</div>
+                    <svg width="80" height="25" viewBox="0 0 80 25"><circle cx="12.5" cy="12.5" r="9" stroke="#2C5F4A" stroke-width="1.5" stroke-dasharray="50 7" fill="none"/><text x="28" y="17" font-family="Inter" font-size="11" font-weight="700" fill="#2C5F4A">LobeDrive</text></svg>
+                </div>
+                <div style="background: var(--light-gray); padding: 24px; border-radius: 8px; flex: 1; text-align: center;">
+                    <div style="font-size: 12px; color: var(--warm-gray); margin-bottom: 8px;">Light Gray</div>
+                    <svg width="80" height="25" viewBox="0 0 80 25"><circle cx="12.5" cy="12.5" r="9" stroke="#2C5F4A" stroke-width="1.5" stroke-dasharray="50 7" fill="none"/><text x="28" y="17" font-family="Inter" font-size="11" font-weight="700" fill="#2C5F4A">LobeDrive</text></svg>
+                </div>
+            </div>
+        </div>
+        
+        <div class="do-dont-grid">
+            <div class="do-box">
+                <h4>✓ Do</h4>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 8px;">✓ Use on approved backgrounds</li>
+                    <li style="margin-bottom: 8px;">✓ Maintain clear space</li>
+                    <li style="margin-bottom: 8px;">✓ Scale proportionally</li>
+                    <li style="margin-bottom: 8px;">✓ Use provided color values</li>
+                </ul>
+            </div>
+            
+            <div class="dont-box">
+                <h4>✗ Don't</h4>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 8px;">✗ Rotate or distort</li>
+                    <li style="margin-bottom: 8px;">✗ Change colors</li>
+                    <li style="margin-bottom: 8px;">✗ Add effects (shadows, glows)</li>
+                    <li style="margin-bottom: 8px;">✗ Place on busy backgrounds</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- TYPOGRAPHY -->
+    <div class="page page-break">
+        <div class="page-header">
+            <div class="page-number">04 — Typography</div>
+            <h1>Typography</h1>
+            <p class="lead">Inter: modern, readable, professional</p>
+        </div>
+        
+        <h2>Primary Font: Inter</h2>
+        <p>We use Inter for all text across all platforms. It's a modern, highly readable sans-serif designed for screens.</p>
+        
+        <div class="type-example">
+            <div class="type-label">Heading 1 • 48px Bold (700)</div>
+            <div class="h1-example">Turn road rage into calm</div>
+        </div>
+        
+        <div class="type-example">
+            <div class="type-label">Heading 2 • 36px Semibold (600)</div>
+            <div class="h2-example">Your brain on road rage</div>
+        </div>
+        
+        <div class="type-example">
+            <div class="type-label">Heading 3 • 24px Medium (500)</div>
+            <div style="font-size: 24px; font-weight: 500; color: var(--charcoal);">Evidence-based psychology for drivers</div>
+        </div>
+        
+        <div class="type-example">
+            <div class="type-label">Body Text • 16px Regular (400) • Line Height 1.6</div>
+            <div class="body-example">
+                LobeDrive helps you manage anger and frustration while driving, using evidence-based psychology delivered through a simple button press. Our approach combines cognitive behavioral therapy, mindfulness, and just-in-time interventions to help you stay calm and safe on the road.
+            </div>
+        </div>
+        
+        <div class="guidelines" style="margin-top: 48px;">
+            <h3>Typography Guidelines</h3>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 24px;">
+                <div>
+                    <h4 style="color: var(--forest-green);">Font Weights</h4>
+                    <ul>
+                        <li><strong>700 (Bold):</strong> Main headings, logo text</li>
+                        <li><strong>600 (Semibold):</strong> Subheadings, buttons</li>
+                        <li><strong>500 (Medium):</strong> Emphasized body text</li>
+                        <li><strong>400 (Regular):</strong> Body text, paragraphs</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 style="color: var(--forest-green);">Line Heights</h4>
+                    <ul>
+                        <li><strong>Headings:</strong> 1.2 (tight)</li>
+                        <li><strong>Body text:</strong> 1.6-1.8 (comfortable reading)</li>
+                        <li><strong>UI elements:</strong> 1.4 (compact)</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h4 style="color: var(--forest-green); margin-top: 32px;">Color Usage</h4>
+            <ul>
+                <li><strong>Main headings:</strong> Forest Green (#2C5F4A)</li>
+                <li><strong>Body text:</strong> Charcoal (#333333)</li>
+                <li><strong>Secondary text:</strong> Warm Gray (#A4B0A8)</li>
+                <li><strong>Links:</strong> Calm Blue (#5B8FA3)</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- DESIGN ELEMENTS -->
+    <div class="page page-break">
+        <div class="page-header">
+            <div class="page-number">05 — Design Elements</div>
+            <h1>Icons & Visual Elements</h1>
+            <p class="lead">Supporting graphics that reinforce our message</p>
+        </div>
+        
+        <h2>Feature Icons</h2>
+        <p>Use these icons to highlight key features and benefits.</p>
+        
+        <div class="elements-grid">
+            <div class="element-card">
+                <div class="element-preview">
+                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+                        <g transform="translate(40, 40)">
+                            <circle cx="0" cy="0" r="12" stroke="#2C5F4A" stroke-width="2.5" fill="none" opacity="1"/>
+                            <circle cx="0" cy="0" r="20" stroke="#6B9080" stroke-width="2" fill="none" opacity="0.6"/>
+                            <circle cx="0" cy="0" r="28" stroke="#6B9080" stroke-width="1.5" stroke-dasharray="4 4" fill="none" opacity="0.3"/>
+                            <circle cx="0" cy="0" r="3" fill="#2C5F4A"/>
+                        </g>
+                    </svg>
+                </div>
+                <h3 style="font-size: 16px; margin-bottom: 8px;">Breathing</h3>
+                <p style="font-size: 14px; color: var(--warm-gray);">Mindfulness & regulation</p>
+            </div>
+            
+            <div class="element-card">
+                <div class="element-preview">
+                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                        <circle cx="30" cy="30" r="20" stroke="#2C5F4A" stroke-width="2.5" fill="none"/>
+                        <g transform="translate(30, 30)">
+                            <path d="M -4 -8 L 4 0 L -4 8 M 4 -8 L -4 0 L 4 8" stroke="#6B9080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        </g>
+                        <path d="M 44 12 L 48 16 L 54 10" stroke="#7FA880" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    </svg>
+                </div>
+                <h3 style="font-size: 16px; margin-bottom: 8px;">Hands-Free</h3>
+                <p style="font-size: 14px; color: var(--warm-gray);">Safe operation</p>
+            </div>
+            
+            <div class="element-card">
+                <div class="element-preview">
+                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                        <path d="M 20 30 Q 20 18, 30 15 Q 40 18, 40 30 Q 40 38, 35 42 L 30 45 L 25 42 Q 20 38, 20 30 Z" stroke="#2C5F4A" stroke-width="2.5" fill="none"/>
+                        <path d="M 26 24 Q 28 22, 30 24" stroke="#6B9080" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.6"/>
+                        <path d="M 30 24 Q 32 22, 34 24" stroke="#6B9080" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.6"/>
+                        <circle cx="44" cy="16" r="6" fill="#5B8FA3"/>
+                        <path d="M 41 16 L 43 18 L 47 14" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    </svg>
+                </div>
+                <h3 style="font-size: 16px; margin-bottom: 8px;">Evidence-Based</h3>
+                <p style="font-size: 14px; color: var(--warm-gray);">Scientific backing</p>
+            </div>
+            
+            <div class="element-card">
+                <div class="element-preview">
+                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                        <rect x="20" y="10" width="20" height="40" rx="3" stroke="#2C5F4A" stroke-width="2.5" fill="none"/>
+                        <g transform="translate(30, 28)">
+                            <path d="M -8 4 Q -4 0, 0 -4 Q 4 0, 8 4" stroke="#A4B0A8" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.4"/>
+                            <circle cx="0" cy="4" r="8" fill="#7FA880" opacity="0.2"/>
+                            <path d="M -3 4 L -1 6 L 3 2" stroke="#7FA880" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        </g>
+                    </svg>
+                </div>
+                <h3 style="font-size: 16px; margin-bottom: 8px;">Works Offline</h3>
+                <p style="font-size: 14px; color: var(--warm-gray);">Always available</p>
+            </div>
+        </div>
+        
+        <h2 style="margin-top: 60px;">Decorative Elements</h2>
+        <p>Use these elements as section dividers and visual interest.</p>
+        
+        <div class="elements-grid">
+            <div class="element-card" style="grid-column: 1 / -1;">
+                <div class="element-preview" style="padding: 40px;">
+                    <svg width="400" height="40" viewBox="0 0 400 40" fill="none">
+                        <path d="M 0 20 Q 50 10, 100 20 T 200 20 T 300 20 T 400 20" stroke="#6B9080" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.6"/>
+                        <path d="M 0 25 Q 50 15, 100 25 T 200 25 T 300 25 T 400 25" stroke="#A4B0A8" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.3"/>
+                        <path d="M 0 30 Q 50 20, 100 30 T 200 30 T 300 30 T 400 30" stroke="#E8E8E8" stroke-width="1" stroke-linecap="round" fill="none" opacity="0.5"/>
+                    </svg>
+                </div>
+                <h3 style="font-size: 16px; margin-bottom: 8px; text-align: center;">Zen Waves</h3>
+                <p style="font-size: 14px; color: var(--warm-gray); text-align: center;">Gentle section separators inspired by Japanese aesthetics</p>
+            </div>
+            
+            <div class="element-card" style="grid-column: 1 / -1;">
+                <div class="element-preview" style="padding: 40px;">
+                    <svg width="400" height="60" viewBox="0 0 400 60" fill="none">
+                        <line x1="0" y1="30" x2="400" y2="30" stroke="#E8E8E8" stroke-width="1"/>
+                        <path d="M 150 30 L 130 10" stroke="#A4B0A8" stroke-width="1.5" opacity="0.4"/>
+                        <path d="M 250 30 L 270 10" stroke="#A4B0A8" stroke-width="1.5" opacity="0.4"/>
+                        <line x1="0" y1="30" x2="400" y2="30" stroke="#6B9080" stroke-width="2" stroke-dasharray="8 8" opacity="0.3"/>
+                        <circle cx="100" cy="30" r="2" fill="#6B9080" opacity="0.5"/>
+                        <circle cx="200" cy="30" r="2" fill="#6B9080" opacity="0.5"/>
+                        <circle cx="300" cy="30" r="2" fill="#6B9080" opacity="0.5"/>
+                    </svg>
+                </div>
+                <h3 style="font-size: 16px; margin-bottom: 8px; text-align: center;">Road Horizon</h3>
+                <p style="font-size: 14px; color: var(--warm-gray); text-align: center;">Road with perspective - symbolizes journey and focus</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- APPLICATIONS -->
+    <div class="page page-break">
+        <div class="page-header">
+            <div class="page-number">06 — Applications</div>
+            <h1>Real-World Usage</h1>
+            <p class="lead">How to apply the brand across different contexts</p>
+        </div>
+        
+        <h2>Button Styles</h2>
+        
+        <div style="background: var(--warm-beige); padding: 40px; border-radius: 12px; margin: 32px 0;">
+            <div style="display: flex; gap: 24px; flex-wrap: wrap; align-items: center; justify-content: center;">
+                <button style="background: var(--forest-green); color: white; border: none; padding: 14px 32px; border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer;">Primary Button</button>
+                <button style="background: transparent; color: var(--forest-green); border: 2px solid var(--forest-green); padding: 14px 32px; border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer;">Secondary Button</button>
+                <button style="background: var(--soft-sage); color: white; border: none; padding: 14px 32px; border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer;">Tertiary Button</button>
+            </div>
+        </div>
+        
+        <div class="guidelines">
+            <h3>Button Specifications</h3>
+            <ul>
+                <li><strong>Border Radius:</strong> 8px (soft, approachable corners)</li>
+                <li><strong>Padding:</strong> 14px vertical, 32px horizontal</li>
+                <li><strong>Font:</strong> Inter Semibold 16px</li>
+                <li><strong>Primary:</strong> Forest Green background, white text</li>
+                <li><strong>Secondary:</strong> Transparent background, Forest Green border & text</li>
+                <li><strong>Hover:</strong> Darken by 10% or change to Soft Sage</li>
+            </ul>
+        </div>
+        
+        <h2 style="margin-top: 60px;">Card Design</h2>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 32px 0;">
+            <div style="background: white; border: 1px solid var(--light-gray); border-radius: 12px; padding: 32px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+                <div style="width: 48px; height: 48px; background: var(--warm-beige); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="10" stroke="#2C5F4A" stroke-width="2"/>
+                    </svg>
+                </div>
+                <h3 style="font-size: 20px; margin-bottom: 12px;">Card Heading</h3>
+                <p style="font-size: 14px; color: var(--warm-gray); line-height: 1.6;">Description text explaining the feature or benefit. Keep it concise and focused.</p>
+            </div>
+            
+            <div style="background: white; border: 1px solid var(--light-gray); border-radius: 12px; padding: 32px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+                <div style="width: 48px; height: 48px; background: var(--warm-beige); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="10" stroke="#2C5F4A" stroke-width="2"/>
+                    </svg>
+                </div>
+                <h3 style="font-size: 20px; margin-bottom: 12px;">Card Heading</h3>
+                <p style="font-size: 14px; color: var(--warm-gray); line-height: 1.6;">Description text explaining the feature or benefit. Keep it concise and focused.</p>
+            </div>
+        </div>
+        
+        <h2 style="margin-top: 60px;">Social Media Guidelines</h2>
+        
+        <div class="guidelines">
+            <h3>Recommended Formats</h3>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 24px;">
+                <div>
+                    <h4 style="color: var(--forest-green);">Profile Images</h4>
+                    <ul>
+                        <li>Use the icon-only logo</li>
+                        <li>Square format (1:1)</li>
+                        <li>Minimum 400x400px</li>
+                        <li>Solid background (Forest Green or Warm Beige)</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 style="color: var(--forest-green);">Cover Images</h4>
+                    <ul>
+                        <li>Use full logo with tagline</li>
+                        <li>Warm Beige or soft gradient background</li>
+                        <li>Include key message or CTA</li>
+                        <li>Follow platform size requirements</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <h2 style="margin-top: 60px;">App Icon Guidelines</h2>
+        
+        <div style="display: flex; gap: 32px; align-items: center; background: var(--warm-beige); padding: 40px; border-radius: 12px; margin: 32px 0;">
+            <div style="flex-shrink: 0;">
+                <div style="width: 180px; height: 180px; border-radius: 40px; background: var(--forest-green); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(0,0,0,0.2);">
+                    <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
+                        <circle cx="60" cy="60" r="42" stroke="white" stroke-width="6" stroke-linecap="round" stroke-dasharray="233 30" fill="none" opacity="0.9"/>
+                        <line x1="60" y1="30" x2="60" y2="90" stroke="white" stroke-width="3.75" opacity="0.5"/>
+                        <line x1="30" y1="60" x2="90" y2="60" stroke="white" stroke-width="3.75" opacity="0.5"/>
+                        <circle cx="60" cy="60" r="4.5" fill="white"/>
+                    </svg>
+                </div>
+            </div>
+            <div style="flex-grow: 1;">
+                <h3 style="margin-top: 0;">iOS/Android App Icon</h3>
+                <ul style="margin-top: 16px;">
+                    <li><strong>Size:</strong> 1024x1024px minimum</li>
+                    <li><strong>Format:</strong> PNG with transparency (will be auto-rounded)</li>
+                    <li><strong>Background:</strong> Solid Forest Green</li>
+                    <li><strong>Icon:</strong> White Zen Wheel (icon version)</li>
+                    <li><strong>Safety margin:</strong> Keep elements 10% from edges</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- CLOSING -->
+    <div class="page page-break">
+        <div class="page-header">
+            <div class="page-number">Final Notes</div>
+            <h1>Remember</h1>
+        </div>
+        
+        <div class="story-section">
+            <h2 style="margin-top: 0;">Consistency Creates Trust</h2>
+            <p>Every time someone encounters LobeDrive—whether on a website, in the app, on social media, or in print—they should immediately recognize us. This recognition builds trust, and trust is essential for a product that helps people in vulnerable moments.</p>
+            
+            <h3>The Brand is the Experience</h3>
+            <p>LobeDrive's visual identity isn't decoration. It's part of the intervention. The colors calm. The shapes reassure. The incompleteness accepts human imperfection.</p>
+            
+            <p class="quote">"Design that does something, not just looks like something."</p>
+            
+            <h3>When in Doubt</h3>
+            <p>Ask yourself: <em>"Does this choice help someone feel calmer, safer, more in control?"</em></p>
+            
+            <p>If the answer is yes, you're on brand.<br>
+            If the answer is no, reconsider.</p>
+        </div>
+        
+        <div style="margin-top: 80px; padding: 60px; text-align: center; background: linear-gradient(135deg, var(--forest-green) 0%, var(--soft-sage) 100%); border-radius: 16px; color: white;">
+            <svg width="120" height="120" viewBox="0 0 120 120" fill="none" style="margin-bottom: 32px;">
+                <circle cx="60" cy="60" r="42" stroke="white" stroke-width="6" stroke-linecap="round" stroke-dasharray="233 30" fill="none" opacity="0.9"/>
+                <line x1="60" y1="30" x2="60" y2="90" stroke="white" stroke-width="3.75" opacity="0.5"/>
+                <line x1="30" y1="60" x2="90" y2="60" stroke="white" stroke-width="3.75" opacity="0.5"/>
+                <circle cx="60" cy="60" r="4.5" fill="white"/>
+            </svg>
+            
+            <h2 style="color: white; margin-bottom: 16px;">Use your lobe. Drive smarter.</h2>
+            <p style="opacity: 0.9; font-size: 18px;">LobeDrive Brand Guide v1.0</p>
+        </div>
+        
+        <div class="page-footer">
+            <p><strong>Questions about brand usage?</strong></p>
+            <p>Contact: contact@lobedrive.com</p>
+            <p style="margin-top: 16px;">© 2025 LobeDrive. All rights reserved.</p>
+        </div>
+    </div>
+
+</body>
+</html>

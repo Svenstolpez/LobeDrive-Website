@@ -1,0 +1,6 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Lätt böjd linje -->
+  <path d="M60 100 Q95 102, 130 100" stroke="#6B9080" stroke-width="4" stroke-linecap="round" fill="none"></path>
+  <!-- Arrowhead -->
+  <path d="M120 88 L140 100 L120 112" stroke="#6B9080" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+</svg>

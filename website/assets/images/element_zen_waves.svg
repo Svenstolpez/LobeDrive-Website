@@ -1,0 +1,25 @@
+<svg width="400" height="40" viewBox="0 0 400 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Calm wave pattern -->
+  <path d="M 0 20 Q 50 10, 100 20 T 200 20 T 300 20 T 400 20" 
+        stroke="#6B9080" 
+        stroke-width="2"
+        stroke-linecap="round"
+        fill="none"
+        opacity="0.6"/>
+  
+  <!-- Second wave (subtle) -->
+  <path d="M 0 25 Q 50 15, 100 25 T 200 25 T 300 25 T 400 25" 
+        stroke="#A4B0A8" 
+        stroke-width="1.5"
+        stroke-linecap="round"
+        fill="none"
+        opacity="0.3"/>
+  
+  <!-- Third wave (very subtle) -->
+  <path d="M 0 30 Q 50 20, 100 30 T 200 30 T 300 30 T 400 30" 
+        stroke="#E8E8E8" 
+        stroke-width="1"
+        stroke-linecap="round"
+        fill="none"
+        opacity="0.5"/>
+</svg>
