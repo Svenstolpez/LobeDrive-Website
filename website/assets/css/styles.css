@@ -211,36 +211,31 @@ section {
    =================================== */
 
 .hero {
-    position: relative;
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(180deg, #F5F1E8 0%, rgba(107, 144, 128, 0.08) 100%);
-    padding: 6rem 1.5rem;
+    background: linear-gradient(135deg, #F5F1E8 0%, #FFFFFF 100%);
     padding-top: 80px;
 }
 
 .hero-content {
     max-width: 800px;
     margin: 0 auto;
-    position: relative;
-    z-index: 1;
 }
 
 .hero-headline {
-    font-size: clamp(2.4rem, 3vw + 1.2rem, 3.4rem);
-    line-height: 1.25;
-    margin-bottom: 1.25rem;
+    font-size: 3rem;
+    margin-bottom: 24px; /* Headline → Subheadline spacing */
     color: #333333;
 }
 
 .hero-subheadline {
-    font-size: 1.05rem;
-    line-height: 1.7;
-    margin-bottom: 2rem;
-    color: #555;
+    font-size: 1.25rem;
+    color: #666666;
+    margin-bottom: 32px; /* Subheadline → CTA button spacing */
+    line-height: 1.8;
 }
 
 /* Hero CTA Stack - vertical layout */
@@ -292,63 +287,6 @@ section {
 
 .hero-learn-more:hover .arrow-icon {
     transform: rotate(90deg) translateY(5px); /* More pronounced bounce with larger arrow */
-}
-
-/* Hero Zen Divider */
-.hero-zen-divider {
-    margin-top: 2.5rem;
-    display: flex;
-    justify-content: center;
-}
-
-.hero-zen-divider img {
-    max-width: 140px;
-    width: 40%;
-    opacity: 0.7;
-}
-
-/* Hero Breathing Circle Animation */
-@keyframes heroBreathingPulse {
-    0% {
-        transform: translate(-50%, -50%) scale(1);
-        opacity: 0.06;
-    }
-    50% {
-        transform: translate(-50%, -50%) scale(1.03);
-        opacity: 0.09;
-    }
-    100% {
-        transform: translate(-50%, -50%) scale(1);
-        opacity: 0.06;
-    }
-}
-
-.hero-breathing-circle {
-    position: absolute;
-    top: 50%;
-    left: 70%;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    animation: heroBreathingPulse 6s ease-in-out infinite;
-    z-index: 0;
-}
-
-.hero-breathing-circle img {
-    display: block;
-    max-width: 260px;
-    width: 40vw;
-}
-
-/* Desktop Hero Improvements */
-@media (min-width: 900px) {
-    .hero {
-        padding: 7.5rem 2rem 8rem;
-    }
-
-    .hero-content {
-        max-width: 720px;
-        margin: 0 auto;
-    }
 }
 
 /* ===================================
@@ -1274,18 +1212,6 @@ section {
 
     .container {
         padding: 0 1.5rem;
-    }
-
-    /* Hero Breathing Circle - Mobile */
-    .hero-breathing-circle {
-        top: 20%;
-        left: 50%;
-        animation-duration: 7s;
-    }
-
-    .hero-breathing-circle img {
-        max-width: 200px;
-        opacity: 0.07;
     }
 
     /* Navigation */
