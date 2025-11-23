@@ -22,6 +22,26 @@ body {
 }
 
 /* ===================================
+   HONEYPOT SPAM PROTECTION
+   =================================== */
+
+.hp-field-wrapper {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+/* Extra security if any styles conflict */
+.hp-field-wrapper input,
+.hp-field-wrapper label {
+    font-size: 1px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* ===================================
    TYPOGRAPHY
    =================================== */
 

@@ -483,9 +483,36 @@ console.log('%cBuilt with ❤️ by Jakob', 'font-size: 12px; color: #999;');
 // GOOGLE FORMS INTEGRATION HANDLERS
 // ===================================
 
+// Track when page loaded for time-based spam protection
+let lobedriveFormInitTime = null;
+const MIN_SUBMIT_DELAY_MS = 2000; // 2 seconds
+
+// Initialize timer when DOM is ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', function() {
+    lobedriveFormInitTime = Date.now();
+  });
+} else {
+  lobedriveFormInitTime = Date.now();
+}
+
 function handleContactSubmit(event) {
-  const honeypot = document.getElementById("hp_contact");
-  if (honeypot && honeypot.value) {
+  const form = event.target;
+
+  // Check honeypot fields
+  const honeypot1 = document.getElementById("hp_contact");
+  const honeypot2 = form.querySelector('input[name="hp_field"]');
+
+  if ((honeypot1 && honeypot1.value) || (honeypot2 && honeypot2.value.trim())) {
+    event.preventDefault();
+    return false;
+  }
+
+  // Check time filter - must be at least 2 seconds since page load
+  const now = Date.now();
+  const elapsed = now - (lobedriveFormInitTime || now);
+
+  if (elapsed < MIN_SUBMIT_DELAY_MS) {
     event.preventDefault();
     return false;
   }
@@ -500,8 +527,22 @@ function handleContactSubmit(event) {
 }
 
 function handleWaitlistSubmit(event) {
-  const honeypot = document.getElementById("hp_waitlist");
-  if (honeypot && honeypot.value) {
+  const form = event.target;
+
+  // Check honeypot fields
+  const honeypot1 = document.getElementById("hp_waitlist");
+  const honeypot2 = form.querySelector('input[name="hp_field"]');
+
+  if ((honeypot1 && honeypot1.value) || (honeypot2 && honeypot2.value.trim())) {
+    event.preventDefault();
+    return false;
+  }
+
+  // Check time filter - must be at least 2 seconds since page load
+  const now = Date.now();
+  const elapsed = now - (lobedriveFormInitTime || now);
+
+  if (elapsed < MIN_SUBMIT_DELAY_MS) {
     event.preventDefault();
     return false;
   }
