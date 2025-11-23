@@ -472,3 +472,39 @@ if (scienceAnimateRight) {
 console.log('%c👋 Hey there!', 'font-size: 20px; font-weight: bold; color: #6B9080;');
 console.log('%cInterested in how LobeDrive works? Check out our GitHub or get in touch at contact@lobedrive.com', 'font-size: 14px; color: #333;');
 console.log('%cBuilt with ❤️ by Jakob', 'font-size: 12px; color: #999;');
+
+// ===================================
+// GOOGLE FORMS INTEGRATION HANDLERS
+// ===================================
+
+function handleContactSubmit(event) {
+  const honeypot = document.getElementById("hp_contact");
+  if (honeypot && honeypot.value) {
+    event.preventDefault();
+    return false;
+  }
+
+  setTimeout(() => {
+    alert("Thanks for reaching out. I'll get back to you as soon as I can.");
+    const form = document.getElementById("contact-form");
+    if (form) form.reset();
+  }, 400);
+
+  return true;
+}
+
+function handleWaitlistSubmit(event) {
+  const honeypot = document.getElementById("hp_waitlist");
+  if (honeypot && honeypot.value) {
+    event.preventDefault();
+    return false;
+  }
+
+  setTimeout(() => {
+    alert("You're on the waitlist. Thank you for your interest in LobeDrive.");
+    const form = document.getElementById("waitlist-form");
+    if (form) form.reset();
+  }, 400);
+
+  return true;
+}

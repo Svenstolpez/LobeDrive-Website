@@ -287,21 +287,61 @@
             <h2 class="section-headline">Be among the first to drive calmer.</h2>
             <p class="section-subheadline">LobeDrive is currently in private beta. Join the waitlist to get early access, updates, and a chance to shape the future of the app.</p>
 
-            <form id="waitlist-form" class="waitlist-form">
-                <div class="form-group">
-                    <label for="email">Email *</label>
-                    <input type="email" id="email" name="email" required placeholder="your@email.com">
-                </div>
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your name">
-                </div>
-                <div class="form-group">
-                    <label for="interest">Why are you interested?</label>
-                    <textarea id="interest" name="interest" rows="3" placeholder="Tell us what brings you here..."></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary btn-large">Join the Waitlist to Drive Safer</button>
+            <form
+              id="waitlist-form"
+              class="waitlist-form"
+              action="https://docs.google.com/forms/d/e/1FAIpQLSeaU3hbeRjvY2hi7Ns4MsImfyCRoma-W4r6r2TdPQONSZxgVQ/formResponse"
+              method="POST"
+              target="hidden_iframe_waitlist"
+              onsubmit="return handleWaitlistSubmit(event)"
+            >
+              <div class="form-group">
+                <label for="waitlist-name">Name</label>
+                <input
+                  type="text"
+                  id="waitlist-name"
+                  name="entry.1221367212"
+                  placeholder="Your name"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="waitlist-email">Email</label>
+                <input
+                  type="email"
+                  id="waitlist-email"
+                  name="entry.1764075785"
+                  placeholder="you@example.com"
+                  required
+                />
+              </div>
+
+              <input
+                type="hidden"
+                name="entry.963489147"
+                value="Waitlist signup from website"
+              />
+
+              <input
+                type="text"
+                id="hp_waitlist"
+                name="hp_waitlist"
+                style="display:none"
+                tabindex="-1"
+                autocomplete="off"
+              />
+
+              <button type="submit" class="btn-primary">
+                Join the waitlist
+              </button>
             </form>
+
+            <iframe
+              name="hidden_iframe_waitlist"
+              id="hidden_iframe_waitlist"
+              style="display:none;"
+            ></iframe>
 
             <div id="form-success" class="form-success" style="display: none;">
                 <h3>Thanks! We'll be in touch soon.</h3>
