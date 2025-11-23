@@ -393,7 +393,7 @@ section {
     background: #FFFFFF;
     border-left: 4px solid #2C5F4A;
     padding: 1.5rem 2rem;
-    margin: 2rem 0;
+    margin: 2rem 0 0.5rem 0;
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -422,6 +422,7 @@ section {
 
 .solution {
     background: #F5F1E8; /* Warm Beige */
+    padding-top: 2rem;
 }
 
 .how-it-works {
@@ -1471,7 +1472,7 @@ section {
 /* Road Horizon Divider */
 .road-divider-container {
     width: 100%;
-    padding: 60px 0;
+    padding: 30px 0;
     text-align: center;
     background: #F5F1E8; /* Warm Beige */
     overflow: hidden;
@@ -1550,7 +1551,7 @@ section {
 
 @media (max-width: 768px) {
     .road-divider-container {
-        padding: 40px 0;
+        padding: 20px 0;
     }
 
     .road-divider {
