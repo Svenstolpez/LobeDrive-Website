@@ -71,98 +71,101 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // FORM HANDLING & VALIDATION
 // ===================================
 
-const waitlistForm = document.getElementById('waitlist-form');
-const formSuccess = document.getElementById('form-success');
+// NOTE: Old waitlist form handler disabled - now using Google Forms integration
+// See handleWaitlistSubmit() at the bottom of this file
 
-if (waitlistForm) {
-    waitlistForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
+// const waitlistForm = document.getElementById('waitlist-form');
+// const formSuccess = document.getElementById('form-success');
 
-        // Get form data
-        const formData = {
-            email: document.getElementById('email').value.trim(),
-            name: document.getElementById('name').value.trim(),
-            interest: document.getElementById('interest').value.trim()
-        };
+// if (waitlistForm) {
+//     waitlistForm.addEventListener('submit', async (e) => {
+//         e.preventDefault();
 
-        // Basic email validation
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(formData.email)) {
-            alert('Please enter a valid email address.');
-            return;
-        }
+//         // Get form data
+//         const formData = {
+//             email: document.getElementById('email').value.trim(),
+//             name: document.getElementById('name').value.trim(),
+//             interest: document.getElementById('interest').value.trim()
+//         };
 
-        // Disable submit button to prevent double submission
-        const submitBtn = waitlistForm.querySelector('button[type="submit"]');
-        const originalBtnText = submitBtn.textContent;
-        submitBtn.disabled = true;
-        submitBtn.textContent = 'Submitting...';
+//         // Basic email validation
+//         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+//         if (!emailRegex.test(formData.email)) {
+//             alert('Please enter a valid email address.');
+//             return;
+//         }
 
-        try {
-            // Here you would integrate with your backend/email service
-            // Example integrations:
+//         // Disable submit button to prevent double submission
+//         const submitBtn = waitlistForm.querySelector('button[type="submit"]');
+//         const originalBtnText = submitBtn.textContent;
+//         submitBtn.disabled = true;
+//         submitBtn.textContent = 'Submitting...';
 
-            // Option 1: Mailchimp
-            // await submitToMailchimp(formData);
+//         try {
+//             // Here you would integrate with your backend/email service
+//             // Example integrations:
 
-            // Option 2: ConvertKit
-            // await submitToConvertKit(formData);
+//             // Option 1: Mailchimp
+//             // await submitToMailchimp(formData);
 
-            // Option 3: Google Sheets via API
-            // await submitToGoogleSheets(formData);
+//             // Option 2: ConvertKit
+//             // await submitToConvertKit(formData);
 
-            // Option 4: Your own backend
-            // await fetch('/api/waitlist', {
-            //     method: 'POST',
-            //     headers: { 'Content-Type': 'application/json' },
-            //     body: JSON.stringify(formData)
-            // });
+//             // Option 3: Google Sheets via API
+//             // await submitToGoogleSheets(formData);
 
-            // For now, simulate a successful submission
-            await new Promise(resolve => setTimeout(resolve, 1000));
+//             // Option 4: Your own backend
+//             // await fetch('/api/waitlist', {
+//             //     method: 'POST',
+//             //     headers: { 'Content-Type': 'application/json' },
+//             //     body: JSON.stringify(formData)
+//             // });
 
-            // Store in localStorage as backup
-            storeSubmissionLocally(formData);
+//             // For now, simulate a successful submission
+//             await new Promise(resolve => setTimeout(resolve, 1000));
 
-            // Show success message
-            waitlistForm.style.display = 'none';
-            formSuccess.style.display = 'block';
+//             // Store in localStorage as backup
+//             storeSubmissionLocally(formData);
 
-            // Scroll to success message
-            formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+//             // Show success message
+//             waitlistForm.style.display = 'none';
+//             formSuccess.style.display = 'block';
 
-            // Track conversion (if using analytics)
-            if (typeof gtag !== 'undefined') {
-                gtag('event', 'conversion', {
-                    'send_to': 'YOUR_CONVERSION_ID',
-                    'value': 1.0,
-                    'currency': 'USD'
-                });
-            }
+//             // Scroll to success message
+//             formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
-        } catch (error) {
-            console.error('Form submission error:', error);
-            alert('Something went wrong. Please try again or email us directly at contact@lobedrive.com');
-            submitBtn.disabled = false;
-            submitBtn.textContent = originalBtnText;
-        }
-    });
-}
+//             // Track conversion (if using analytics)
+//             if (typeof gtag !== 'undefined') {
+//                 gtag('event', 'conversion', {
+//                     'send_to': 'YOUR_CONVERSION_ID',
+//                     'value': 1.0,
+//                     'currency': 'USD'
+//                 });
+//             }
+
+//         } catch (error) {
+//             console.error('Form submission error:', error);
+//             alert('Something went wrong. Please try again or email us directly at contact@lobedrive.com');
+//             submitBtn.disabled = false;
+//             submitBtn.textContent = originalBtnText;
+//         }
+//     });
+// }
 
 // Store form data locally as backup
-function storeSubmissionLocally(data) {
-    try {
-        const submissions = JSON.parse(localStorage.getItem('lobedrive_submissions') || '[]');
-        submissions.push({
-            ...data,
-            timestamp: new Date().toISOString()
-        });
-        localStorage.setItem('lobedrive_submissions', JSON.stringify(submissions));
-        console.log('Form data stored locally:', data);
-    } catch (error) {
-        console.error('Error storing form data:', error);
-    }
-}
+// function storeSubmissionLocally(data) {
+//     try {
+//         const submissions = JSON.parse(localStorage.getItem('lobedrive_submissions') || '[]');
+//         submissions.push({
+//             ...data,
+//             timestamp: new Date().toISOString()
+//         });
+//         localStorage.setItem('lobedrive_submissions', JSON.stringify(submissions));
+//         console.log('Form data stored locally:', data);
+//     } catch (error) {
+//         console.error('Error storing form data:', error);
+//     }
+// }
 
 // ===================================
 // INTEGRATION EXAMPLES
@@ -312,86 +315,89 @@ if (waitlistForm) {
 // CONTACT FORM HANDLING
 // ===================================
 
-const contactForm = document.getElementById('contact-form');
-const contactSuccess = document.getElementById('contact-success');
+// NOTE: Old contact form handler disabled - now using Google Forms integration
+// See handleContactSubmit() at the bottom of this file
 
-if (contactForm) {
-    contactForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
+// const contactForm = document.getElementById('contact-form');
+// const contactSuccess = document.getElementById('contact-success');
 
-        // Get form data
-        const formData = {
-            name: document.getElementById('contact-name').value.trim(),
-            email: document.getElementById('contact-email').value.trim(),
-            message: document.getElementById('contact-message').value.trim()
-        };
+// if (contactForm) {
+//     contactForm.addEventListener('submit', async (e) => {
+//         e.preventDefault();
 
-        // Validate required fields
-        if (!formData.name || !formData.email || !formData.message) {
-            alert('Please fill in all required fields.');
-            return;
-        }
+//         // Get form data
+//         const formData = {
+//             name: document.getElementById('contact-name').value.trim(),
+//             email: document.getElementById('contact-email').value.trim(),
+//             message: document.getElementById('contact-message').value.trim()
+//         };
 
-        // Validate email format
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(formData.email)) {
-            alert('Please enter a valid email address.');
-            return;
-        }
+//         // Validate required fields
+//         if (!formData.name || !formData.email || !formData.message) {
+//             alert('Please fill in all required fields.');
+//             return;
+//         }
 
-        // Validate message length (minimum 10 characters)
-        if (formData.message.length < 10) {
-            alert('Please enter a message with at least 10 characters.');
-            return;
-        }
+//         // Validate email format
+//         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+//         if (!emailRegex.test(formData.email)) {
+//             alert('Please enter a valid email address.');
+//             return;
+//         }
 
-        // Disable submit button
-        const submitBtn = contactForm.querySelector('button[type="submit"]');
-        const originalBtnText = submitBtn.textContent;
-        submitBtn.disabled = true;
-        submitBtn.textContent = 'Sending...';
+//         // Validate message length (minimum 10 characters)
+//         if (formData.message.length < 10) {
+//             alert('Please enter a message with at least 10 characters.');
+//             return;
+//         }
 
-        try {
-            // Here you would integrate with your backend/email service
-            // For now, simulate a successful submission
-            await new Promise(resolve => setTimeout(resolve, 1000));
+//         // Disable submit button
+//         const submitBtn = contactForm.querySelector('button[type="submit"]');
+//         const originalBtnText = submitBtn.textContent;
+//         submitBtn.disabled = true;
+//         submitBtn.textContent = 'Sending...';
 
-            // Store in localStorage as backup
-            storeContactSubmissionLocally(formData);
+//         try {
+//             // Here you would integrate with your backend/email service
+//             // For now, simulate a successful submission
+//             await new Promise(resolve => setTimeout(resolve, 1000));
 
-            // Show success message
-            contactForm.style.display = 'none';
-            contactSuccess.style.display = 'block';
+//             // Store in localStorage as backup
+//             storeContactSubmissionLocally(formData);
 
-            // Scroll to success message
-            contactSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+//             // Show success message
+//             contactForm.style.display = 'none';
+//             contactSuccess.style.display = 'block';
 
-            // Reset form
-            contactForm.reset();
+//             // Scroll to success message
+//             contactSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
-        } catch (error) {
-            console.error('Contact form submission error:', error);
-            alert('Something went wrong. Please try again later.');
-            submitBtn.disabled = false;
-            submitBtn.textContent = originalBtnText;
-        }
-    });
-}
+//             // Reset form
+//             contactForm.reset();
+
+//         } catch (error) {
+//             console.error('Contact form submission error:', error);
+//             alert('Something went wrong. Please try again later.');
+//             submitBtn.disabled = false;
+//             submitBtn.textContent = originalBtnText;
+//         }
+//     });
+// }
 
 // Store contact form data locally as backup
-function storeContactSubmissionLocally(data) {
-    try {
-        const submissions = JSON.parse(localStorage.getItem('lobedrive_contact_submissions') || '[]');
-        submissions.push({
-            ...data,
-            timestamp: new Date().toISOString()
-        });
-        localStorage.setItem('lobedrive_contact_submissions', JSON.stringify(submissions));
-        console.log('Contact form data stored locally:', data);
-    } catch (error) {
-        console.error('Error storing contact form data:', error);
-    }
-}
+// function storeContactSubmissionLocally(data) {
+//     try {
+//         const submissions = JSON.parse(localStorage.getItem('lobedrive_contact_submissions') || '[]');
+//         submissions.push({
+//             ...data,
+//             timestamp: new Date().toISOString()
+//         });
+//         localStorage.setItem('lobedrive_contact_submissions', JSON.stringify(submissions));
+//         console.log('Contact form data stored locally:', data);
+//     } catch (error) {
+//         console.error('Error storing contact form data:', error);
+//     }
+// }
 
 // ===================================
 // FAQ ACCORDION
