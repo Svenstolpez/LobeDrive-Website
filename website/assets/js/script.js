@@ -74,8 +74,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // NOTE: Old waitlist form handler disabled - now using Google Forms integration
 // See handleWaitlistSubmit() at the bottom of this file
 
-// const waitlistForm = document.getElementById('waitlist-form');
-// const formSuccess = document.getElementById('form-success');
+const waitlistForm = document.getElementById('waitlist-form');
+const formSuccess = document.getElementById('form-success');
 
 // if (waitlistForm) {
 //     waitlistForm.addEventListener('submit', async (e) => {
@@ -304,7 +304,7 @@ if (waitlistForm) {
     const utmCampaign = getUrlParameter('utm_campaign');
 
     if (utmSource || utmCampaign) {
-        const interestField = document.getElementById('interest');
+        const interestField = document.getElementById('waitlist-interest');
         if (interestField && !interestField.value) {
             interestField.value = `Referred from: ${utmSource || 'unknown'} ${utmCampaign ? '(' + utmCampaign + ')' : ''}`;
         }
