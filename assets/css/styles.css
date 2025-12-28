@@ -722,12 +722,29 @@ section {
     padding: 2rem;
     border-radius: 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.column-heading-wrapper {
+    margin-bottom: 1.5rem;
+}
+
+.column-heading {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.column-underline {
+    margin: 0 auto;
+    display: block;
 }
 
 .education-list {
     list-style: none;
     padding: 0;
-    margin: 1.5rem 0 0 0;
+    margin: 1.5rem auto 0 auto;
+    max-width: 350px;
+    text-align: left;
 }
 
 .education-list li {
