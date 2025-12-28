@@ -142,6 +142,19 @@ const lang = {
       a4: "No. LobeDrive is a supportive tool based on therapeutic techniques, but it's not a substitute for professional mental health treatment.",
       q5: "How much will it cost?",
       a5: "Pricing will be announced closer to launch. Early waitlist members will receive special offers."
+    },
+
+    // Footer Section
+    footer: {
+      col1Heading: "LobeDrive",
+      col1Text: "Real-time support that keeps you focused and safe while driving.",
+      col2Heading: "Contact",
+      col2Text: "Questions or partnerships?",
+      col2Link: "Get in touch",
+      col3Heading: "Follow Us",
+      copyright: "© 2025 LobeDrive. All rights reserved.",
+      privacyLink: "Privacy Policy",
+      termsLink: "Terms of Service"
     }
   },
 
@@ -278,6 +291,19 @@ const lang = {
       a4: "Nej. LobeDrive är ett stödjande verktyg baserat på terapeutiska tekniker, men det är inte en ersättning för professionell psykisk hälsovård.",
       q5: "Hur mycket kommer det att kosta?",
       a5: "Prissättning meddelas närmare lansering. Tidiga medlemmar på väntelistan kommer att få speciella erbjudanden."
+    },
+
+    // Footer Section
+    footer: {
+      col1Heading: "LobeDrive",
+      col1Text: "Realtidsstöd som håller dig fokuserad och säker när du kör.",
+      col2Heading: "Kontakt",
+      col2Text: "Frågor eller partnerskap?",
+      col2Link: "Hör av dig",
+      col3Heading: "Följ oss",
+      copyright: "© 2025 LobeDrive. Alla rättigheter förbehållna.",
+      privacyLink: "Integritetspolicy",
+      termsLink: "Användarvillkor"
     }
   }
 };
