@@ -16,8 +16,8 @@ body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-size: 16px;
     line-height: 1.7;
-    color: #333333;
-    background-color: #F5F1E8;
+    color: #1A1A1A;
+    background-color: #F7F4EF;
     overflow-x: hidden;
 }
 
@@ -52,12 +52,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
+    font-size: 2rem;
+    font-weight: 600;
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 1.75rem;
 }
 
 h3 {
@@ -69,13 +69,13 @@ p {
 }
 
 a {
-    color: #2C5F4A;
+    color: #A5C49F;
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition: all 0.25s ease;
 }
 
 a:hover {
-    color: #6B9080;
+    color: #53735B;
 }
 
 /* ===================================
@@ -159,18 +159,18 @@ section {
 }
 
 .nav-link:hover {
-    color: #2C5F4A;
+    color: #A5C49F;
 }
 
 .nav-cta {
     padding: 0.5rem 1.5rem;
-    background: #2C5F4A;
+    background: #A5C49F;
     color: #FFFFFF !important;
-    border-radius: 8px;
+    border-radius: 14px;
 }
 
 .nav-cta:hover {
-    background: #6B9080;
+    background: #53735B;
 }
 
 /* ===================================
@@ -181,24 +181,24 @@ section {
     display: inline-block;
     padding: 14px 32px;
     border: none;
-    border-radius: 8px;
+    border-radius: 14px;
     font-size: 1rem;
     font-weight: 600;
     text-align: center;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.25s ease;
     text-decoration: none;
 }
 
 .btn-primary {
-    background: #2C5F4A;
+    background: #A5C49F;
     color: #FFFFFF;
 }
 
 .btn-primary:hover {
-    background: #234a39; /* Darker Forest Green for better contrast */
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(44, 95, 74, 0.3);
+    background: #53735B;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(165, 196, 159, 0.3);
 }
 
 .btn-large {
@@ -250,7 +250,7 @@ section {
 .btn-hero {
     height: 52px;
     padding: 0 24px;
-    border-radius: 8px;
+    border-radius: 14px;
     font-weight: 600;
     display: inline-flex;
     align-items: center;
@@ -263,7 +263,7 @@ section {
     display: inline-flex;
     align-items: center;
     gap: 4px; /* Minimal gap - arrow very close to text */
-    color: #6B9080; /* Soft Sage */
+    color: #53735B; /* Soft Sage */
     font-size: 18px; /* Increased from 15px */
     font-weight: 500;
     text-decoration: none;
@@ -303,7 +303,7 @@ section {
     text-align: center;
     font-size: 1.25rem;
     font-style: italic;
-    color: #6B9080;
+    color: #53735B;
     margin-top: -1rem;
     margin-bottom: 2rem;
 }
@@ -391,10 +391,10 @@ section {
 /* Callout box */
 .callout-box {
     background: #FFFFFF;
-    border-left: 4px solid #2C5F4A;
+    border-left: 4px solid #A5C49F;
     padding: 1.5rem 2rem;
     margin: 2rem 0 0.5rem 0;
-    border-radius: 8px;
+    border-radius: 16px;
     display: flex;
     align-items: center;
     gap: 1.5rem;
@@ -468,7 +468,7 @@ section {
 .features {
     background: #FFFFFF;
     padding: 1.5rem 2rem;
-    border-radius: 12px;
+    border-radius: 20px;
     margin-top: 3rem;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 }
@@ -521,7 +521,7 @@ section {
 }
 
 .check {
-    color: #2C5F4A;
+    color: #A5C49F;
     font-weight: bold;
     flex-shrink: 0;
 }
@@ -558,7 +558,7 @@ section {
 .powers-heading {
     text-align: center;
     font-size: 1.25rem;
-    color: #2C5F4A;
+    color: #A5C49F;
     margin-bottom: 2rem;
 }
 
@@ -585,7 +585,7 @@ section {
 
 .column-heading {
     font-size: 1.125rem;
-    color: #2C5F4A;
+    color: #A5C49F;
     margin-bottom: 0.5rem;
     text-align: left;
 }
@@ -612,7 +612,7 @@ section {
 }
 
 .science-text-list strong {
-    color: #2C5F4A;
+    color: #A5C49F;
     font-weight: 600;
 }
 
@@ -642,7 +642,7 @@ section {
 }
 
 .science-footnotes sup {
-    color: #2C5F4A;
+    color: #A5C49F;
     font-weight: 600;
     margin-right: 0.25rem;
 }
@@ -652,7 +652,7 @@ section {
 }
 
 .science-footnotes a {
-    color: #2C5F4A;
+    color: #A5C49F;
     text-decoration: underline;
 }
 
@@ -685,16 +685,100 @@ section {
     opacity: 0.6;
 }
 
+/* ===================================
+   EDUCATION PLATFORM TEASER SECTION
+   =================================== */
+
+.education-teaser {
+    background: #F7F4EF;
+    padding: 5rem 0;
+}
+
+.education-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.education-intro {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.education-intro p {
+    font-size: 1.125rem;
+    color: #1A1A1A;
+    line-height: 1.7;
+}
+
+.education-two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.education-column {
+    background: #FFFFFF;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.education-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0 0 0;
+}
+
+.education-list li {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+    color: #1A1A1A;
+    line-height: 1.6;
+}
+
+.education-list li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #A5C49F;
+    font-weight: 600;
+}
+
+.education-cta {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 2rem;
+    background: #FFFFFF;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.education-cta-text {
+    font-size: 1.125rem;
+    color: #1A1A1A;
+    margin-bottom: 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .education-two-columns {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
 /* Legacy styles - keeping for backwards compatibility */
 .approach {
     background: #FFFFFF;
     padding: 2rem;
-    border-radius: 12px;
+    border-radius: 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 .approach h3 {
-    color: #2C5F4A;
+    color: #A5C49F;
     margin-bottom: 1rem;
 }
 
@@ -734,7 +818,7 @@ section {
 }
 
 .results-benefits strong {
-    color: #2C5F4A;
+    color: #A5C49F;
     font-weight: 600;
 }
 
@@ -747,17 +831,17 @@ section {
 }
 
 .references-link {
-    color: #2C5F4A;
+    color: #A5C49F;
     font-weight: 600;
     text-decoration: none;
-    border-bottom: 2px solid #2C5F4A;
+    border-bottom: 2px solid #A5C49F;
     padding-bottom: 2px;
     transition: all 0.2s ease;
 }
 
 .references-link:hover {
-    color: #6B9080;
-    border-bottom-color: #6B9080;
+    color: #53735B;
+    border-bottom-color: #53735B;
 }
 
 .references-link sup {
@@ -811,7 +895,7 @@ section {
 .founder-heading {
     font-size: 42px;
     font-weight: 700;
-    color: #2C5F4A; /* Forest Green */
+    color: #A5C49F; /* Forest Green */
     text-align: center;
     margin-bottom: 48px;
     line-height: 1.2;
@@ -837,7 +921,7 @@ section {
 .founder-greeting {
     font-size: 28px;
     font-weight: 600;
-    color: #6B9080; /* Soft Sage */
+    color: #53735B; /* Soft Sage */
     margin-bottom: 24px;
     position: relative;
 }
@@ -877,7 +961,7 @@ section {
     transform: translateX(-50%);
     width: 80px;
     height: 5px;
-    background: linear-gradient(90deg, #2C5F4A 0%, #5B8FA3 100%);
+    background: linear-gradient(90deg, #A5C49F 0%, #5B8FA3 100%);
     border-radius: 3px;
 }
 
@@ -885,7 +969,7 @@ section {
     margin: 0;
     font-size: 22px;
     line-height: 1.6;
-    color: #2C5F4A;
+    color: #A5C49F;
     font-weight: 600;
 }
 
@@ -906,7 +990,7 @@ section {
     height: 220px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid #6B9080; /* Soft Sage border */
+    border: 4px solid #53735B; /* Soft Sage border */
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     display: block;
 }
@@ -916,7 +1000,7 @@ section {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    color: #6B9080;
+    color: #53735B;
     text-decoration: none;
     font-size: 14px;
     font-weight: 500;
@@ -924,7 +1008,7 @@ section {
 }
 
 .ld-social-link:hover {
-    color: #2C5F4A; /* Forest Green */
+    color: #A5C49F; /* Forest Green */
     transform: translateY(-2px);
 }
 
@@ -938,7 +1022,7 @@ section {
    =================================== */
 
 .waitlist {
-    background: linear-gradient(135deg, #2C5F4A 0%, #6B9080 100%);
+    background: linear-gradient(135deg, #A5C49F 0%, #53735B 100%);
     color: #FFFFFF;
 }
 
@@ -952,7 +1036,7 @@ section {
     margin: 3rem auto 0;
     background: #FFFFFF;
     padding: 3rem;
-    border-radius: 12px;
+    border-radius: 20px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
 }
 
@@ -981,7 +1065,7 @@ section {
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #2C5F4A;
+    border-color: #A5C49F;
 }
 
 .form-group textarea {
@@ -997,13 +1081,13 @@ section {
     margin: 3rem auto 0;
     background: #FFFFFF;
     padding: 3rem;
-    border-radius: 12px;
+    border-radius: 20px;
     text-align: center;
-    color: #333333;
+    color: #1A1A1A;
 }
 
 .form-success h3 {
-    color: #2C5F4A;
+    color: #A5C49F;
     margin-bottom: 1rem;
 }
 
@@ -1020,7 +1104,7 @@ section {
     margin: 3rem auto 0;
     background: #FFFFFF;
     padding: 3rem;
-    border-radius: 12px;
+    border-radius: 20px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
 }
 
@@ -1044,7 +1128,7 @@ section {
 .faq-item {
     background: #FFFFFF;
     margin-bottom: 1rem;
-    border-radius: 12px;
+    border-radius: 20px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     overflow: hidden;
 }
@@ -1061,7 +1145,7 @@ section {
     text-align: left;
     font-size: 1.25rem;
     font-weight: 600;
-    color: #2C5F4A;
+    color: #A5C49F;
     transition: all 0.3s ease;
 }
 
@@ -1077,7 +1161,7 @@ section {
 .faq-icon {
     font-size: 1.5rem;
     font-weight: 400;
-    color: #2C5F4A;
+    color: #A5C49F;
     transition: transform 0.3s ease;
 }
 
@@ -1122,7 +1206,7 @@ section {
 }
 
 .footer-col h4 {
-    color: #6B9080;
+    color: #53735B;
     margin-bottom: 1rem;
 }
 
@@ -1136,7 +1220,7 @@ section {
 }
 
 .footer-col a:hover {
-    color: #6B9080;
+    color: #53735B;
 }
 
 .social-links {
@@ -1156,7 +1240,7 @@ section {
 }
 
 .social-link:hover {
-    background: #6B9080;
+    background: #53735B;
     transform: translateY(-3px);
 }
 
@@ -1606,7 +1690,7 @@ section {
 .legal-title {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #2C5F4A;
+    color: #A5C49F;
     margin-bottom: 0.5rem;
     text-align: center;
 }
@@ -1628,7 +1712,7 @@ section {
 .legal-text h2 {
     font-size: 1.5rem;
     font-weight: 600;
-    color: #2C5F4A;
+    color: #A5C49F;
     margin-top: 2.5rem;
     margin-bottom: 1rem;
 }
@@ -1650,7 +1734,7 @@ section {
 
 .legal-text strong {
     font-weight: 600;
-    color: #2C5F4A;
+    color: #A5C49F;
 }
 
 .legal-text em {

@@ -22,9 +22,21 @@ This file tracks website updates, content changes, and maintenance tasks.
 
 ### High Priority (V1 Launch)
 
-- [ ] Update index.html with V1 messaging
+- [ ] **Redesign Hero Section for Immediate Comprehension**
       Status: Not started
-      Notes: Use clear value proposition from @startup/business/brand-position.md
+      Phase: V1 Launch
+      Owner: Jakob (with design/copywriter support)
+      Notes: Current hero doesn't clearly communicate how the app works
+      Acceptance Criteria:
+      - Design visual representation of app functionality (avoid text-heavy explanation)
+      - Consider: "Situation → Button → Coach → Clarity" visual flow
+      - Show Bluetooth button + in-app button options visually
+      - Use icons/illustrations from @web/Docs/
+      - Test with 5-second comprehension rule (user understands concept in <5s)
+      - Follow @docs/BRAND.md (minimal Scandinavian, zen-inspired, calm-tech)
+      - Integrate clear value proposition from @startup/business/brand-position.md
+      Reference: @startup/business/brand-position.md Section 11
+
 
 - [ ] Add App Store download CTA
       Status: Not started
@@ -35,6 +47,7 @@ This file tracks website updates, content changes, and maintenance tasks.
       Notes: Review with legal if needed
 
 ### Medium Priority
+
 - [ ] Add "How it works" section to landing page
       Status: Not started
       Notes: 3-4 simple steps, visual aids from @web/Docs/, emphasize Bluetooth hands-free option
@@ -63,7 +76,56 @@ This file tracks website updates, content changes, and maintenance tasks.
 
 ## Completed
 
-_No completed tasks yet_
+- [x] **Verify Website Brand Guidelines Compliance**
+      Completed: 2025-12-28
+      Phase: V1 Launch
+      Owner: Jakob
+      Result:
+      - Created comprehensive brand compliance audit (@web/dev-docs/brand-compliance-checklist.md)
+      - Documented 29 violations across 4 severity levels (@web/dev-docs/brand-audit-findings.md)
+      - Fixed all CRITICAL (8), HIGH (11), and MEDIUM (8) violations
+      - Color palette: Replaced #2C5F4A → #A5C49F, #6B9080 → #53735B, #333333 → #1A1A1A, #F5F1E8 → #F7F4EF
+      - Removed 6 instances of mindfulness/wellness language across all pages
+      - Typography: h1 weight 700→600, sizes reduced, transitions 300ms→250ms
+      - Border radius: 8px→14px (buttons), 12px→20px (cards)
+      - Verified compliance: index.html, contact.html, privacy.html, terms.html, references.html
+
+- [x] **Remove/Replace Outdated App Animation**
+      Completed: 2025-12-28
+      Phase: V1 Launch
+      Owner: Jakob
+      Result:
+      - Replaced outdated demo video with user-provided webanimation.mp4/webm
+      - Backed up old files: lobedrive_demo_OLD.mp4/webm
+      - Updated index.html video source paths
+      - New animation: 79KB (mp4), 45KB (webm)
+
+- [x] **Update index.html with V1 messaging**
+      Completed: 2025-12-28
+      Phase: V1 Launch
+      Result:
+      - Page title: "Turn Road Rage into Calm" → "Restore Clarity When Irritation Strikes"
+      - Hero headline: Updated to agency-focused language
+      - Hero subheadline: "A just-in-time coach that helps you choose clarity in real traffic conditions"
+      - Removed all "breathe" language (2 instances)
+      - Science section: "Mindfulness CBT" → "Cognitive Regulation"
+      - Features: "mindfulness" → "affect regulation"
+      - Waitlist: "drive calmer" → "drive with clarity"
+      - All copy now follows @startup/business/brand-position.md
+
+- [x] **Add Education Platform Teaser Section**
+      Completed: 2025-12-28
+      Phase: V1 Launch
+      Owner: Jakob
+      Result:
+      - Added new SECTION 6 to index.html (lines 240-285)
+      - Two-column grid layout: "Education Platform teaches" vs "Mobile App applies"
+      - Headline: "Learn the principles. Apply them in real time."
+      - Subheadline: "Coming soon: A 30-minute course on emotional regulation in traffic"
+      - Positioned education as core knowledge layer, app as memory trigger
+      - CTA links to waitlist
+      - Added complete CSS styles (lines 688-770): responsive grid, white cards, custom arrow bullets
+      - All language brand-compliant (no mindfulness/therapy terminology)
 
 ## Backlog (Post-V1)
 
