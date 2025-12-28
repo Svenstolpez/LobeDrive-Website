@@ -155,6 +155,35 @@ const lang = {
       copyright: "© 2025 LobeDrive. All rights reserved.",
       privacyLink: "Privacy Policy",
       termsLink: "Terms of Service"
+    },
+
+    // Contact Page
+    contact: {
+      metaDescription: "Get support for the LobeDrive app or contact us for partnerships, research collaboration, and press inquiries.",
+      pageTitle: "Support & Contact - LobeDrive",
+      supportHeadline: "App Support",
+      supportSubheadline: "Common questions and troubleshooting",
+      faq1Question: "Bluetooth button not connecting?",
+      faq1Answer: "Make sure Bluetooth is enabled on your phone, and pair the button in System Settings → Bluetooth. The app will detect the button automatically after the first press.",
+      faq2Question: "Audio not playing?",
+      faq2Answer: "Check your phone's volume and ensure the app has audio permissions enabled in Settings → LobeDrive.",
+      faq3Question: "How do I change language?",
+      faq3Answer: "Open the app → Settings (gear icon) → tap the language toggle to switch between Swedish and English.",
+      faq4Question: "Privacy concerns?",
+      faq4Answer: "LobeDrive collects zero data. Everything works offline. See our",
+      faq4LinkText: "Privacy Policy",
+      faq4AfterLink: "for details.",
+      contactHeadline: "Still Need Help?",
+      contactSubheadline: "Send us a message and we'll get back to you",
+      nameLabel: "Name",
+      namePlaceholder: "Your name",
+      emailLabel: "Email",
+      emailPlaceholder: "you@example.com",
+      messageLabel: "Message",
+      messagePlaceholder: "Your message",
+      submitButton: "Send Message",
+      successHeadline: "Thank you! We'll get back to you soon.",
+      successLink: "Back to Home"
     }
   },
 
@@ -304,6 +333,35 @@ const lang = {
       copyright: "© 2025 LobeDrive. Alla rättigheter förbehållna.",
       privacyLink: "Integritetspolicy",
       termsLink: "Användarvillkor"
+    },
+
+    // Contact Page
+    contact: {
+      metaDescription: "Få support för LobeDrive-appen eller kontakta oss för partnerskap, forskningssamarbete och pressförfrågningar.",
+      pageTitle: "Support & Kontakt - LobeDrive",
+      supportHeadline: "App Support",
+      supportSubheadline: "Vanliga frågor och felsökning",
+      faq1Question: "Bluetooth-knappen ansluter inte?",
+      faq1Answer: "Se till att Bluetooth är aktiverat på din telefon och para ihop knappen i Systeminställningar → Bluetooth. Appen kommer att upptäcka knappen automatiskt efter första trycket.",
+      faq2Question: "Ljudet spelas inte upp?",
+      faq2Answer: "Kontrollera telefonens volym och se till att appen har ljudbehörigheter aktiverade i Inställningar → LobeDrive.",
+      faq3Question: "Hur byter jag språk?",
+      faq3Answer: "Öppna appen → Inställningar (kugghjulsikonen) → tryck på språkväxlaren för att byta mellan svenska och engelska.",
+      faq4Question: "Integritetsfrågor?",
+      faq4Answer: "LobeDrive samlar in noll data. Allt fungerar offline. Se vår",
+      faq4LinkText: "Integritetspolicy",
+      faq4AfterLink: "för detaljer.",
+      contactHeadline: "Behöver du fortfarande hjälp?",
+      contactSubheadline: "Skicka ett meddelande så hör vi av oss",
+      nameLabel: "Namn",
+      namePlaceholder: "Ditt namn",
+      emailLabel: "E-post",
+      emailPlaceholder: "du@exempel.se",
+      messageLabel: "Meddelande",
+      messagePlaceholder: "Ditt meddelande",
+      submitButton: "Skicka meddelande",
+      successHeadline: "Tack! Vi hör av oss snart.",
+      successLink: "Tillbaka till startsidan"
     }
   }
 };

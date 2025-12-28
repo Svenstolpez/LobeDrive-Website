@@ -24,11 +24,21 @@
                 <span></span>
             </button>
             <ul class="nav-menu">
-                <li><a href="index.html#problem" class="nav-link">How It Works</a></li>
-                <li><a href="index.html#science" class="nav-link">The Science</a></li>
-                <li><a href="index.html#about" class="nav-link">About</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
-                <li><a href="index.html#waitlist" class="nav-link nav-cta">Join the Waitlist to Drive Safer</a></li>
+                <li><a href="index.html#problem" class="nav-link" data-lang-key="nav.howItWorks">How It Works</a></li>
+                <li><a href="index.html#science" class="nav-link" data-lang-key="nav.science">The Science</a></li>
+                <li><a href="index.html#about" class="nav-link" data-lang-key="nav.about">About</a></li>
+                <li><a href="contact.html" class="nav-link" data-lang-key="nav.contact">Contact</a></li>
+                <li><a href="index.html#waitlist" class="nav-link nav-cta" data-lang-key="nav.cta">Join the Waitlist to Drive Safer</a></li>
+                <li class="lang-switcher">
+                    <button class="lang-switcher-btn" data-lang="sv" aria-label="Switch to Swedish">
+                        <span class="flag">🇸🇪</span>
+                        <span>Svenska</span>
+                    </button>
+                    <button class="lang-switcher-btn" data-lang="en" aria-label="Switch to English">
+                        <span class="flag">🇬🇧</span>
+                        <span>English</span>
+                    </button>
+                </li>
             </ul>
         </div>
     </nav>
@@ -36,28 +46,28 @@
     <!-- SUPPORT SECTION -->
     <section id="support" class="contact" style="padding-top: 8rem; padding-bottom: 2rem;">
         <div class="container">
-            <h2 class="section-headline">App Support</h2>
-            <p class="section-subheadline">Common questions and troubleshooting</p>
+            <h2 class="section-headline" data-lang-key="contact.supportHeadline">App Support</h2>
+            <p class="section-subheadline" data-lang-key="contact.supportSubheadline">Common questions and troubleshooting</p>
 
             <div style="max-width: 800px; margin: 0 auto 4rem; text-align: left;">
                 <div style="margin-bottom: 2rem;">
-                    <h3 style="color: #1A1A1A; margin-bottom: 0.5rem;">Bluetooth button not connecting?</h3>
-                    <p style="color: #53735B; line-height: 1.6;">Make sure Bluetooth is enabled on your phone, and pair the button in System Settings → Bluetooth. The app will detect the button automatically after the first press.</p>
+                    <h3 style="color: #1A1A1A; margin-bottom: 0.5rem;" data-lang-key="contact.faq1Question">Bluetooth button not connecting?</h3>
+                    <p style="color: #53735B; line-height: 1.6;" data-lang-key="contact.faq1Answer">Make sure Bluetooth is enabled on your phone, and pair the button in System Settings → Bluetooth. The app will detect the button automatically after the first press.</p>
                 </div>
 
                 <div style="margin-bottom: 2rem;">
-                    <h3 style="color: #1A1A1A; margin-bottom: 0.5rem;">Audio not playing?</h3>
-                    <p style="color: #53735B; line-height: 1.6;">Check your phone's volume and ensure the app has audio permissions enabled in Settings → LobeDrive.</p>
+                    <h3 style="color: #1A1A1A; margin-bottom: 0.5rem;" data-lang-key="contact.faq2Question">Audio not playing?</h3>
+                    <p style="color: #53735B; line-height: 1.6;" data-lang-key="contact.faq2Answer">Check your phone's volume and ensure the app has audio permissions enabled in Settings → LobeDrive.</p>
                 </div>
 
                 <div style="margin-bottom: 2rem;">
-                    <h3 style="color: #1A1A1A; margin-bottom: 0.5rem;">How do I change language?</h3>
-                    <p style="color: #53735B; line-height: 1.6;">Open the app → Settings (gear icon) → tap the language toggle to switch between Swedish and English.</p>
+                    <h3 style="color: #1A1A1A; margin-bottom: 0.5rem;" data-lang-key="contact.faq3Question">How do I change language?</h3>
+                    <p style="color: #53735B; line-height: 1.6;" data-lang-key="contact.faq3Answer">Open the app → Settings (gear icon) → tap the language toggle to switch between Swedish and English.</p>
                 </div>
 
                 <div style="margin-bottom: 2rem;">
-                    <h3 style="color: #1A1A1A; margin-bottom: 0.5rem;">Privacy concerns?</h3>
-                    <p style="color: #53735B; line-height: 1.6;">LobeDrive collects zero data. Everything works offline. See our <a href="privacy.html" style="color: #A5C49F; text-decoration: underline;">Privacy Policy</a> for details.</p>
+                    <h3 style="color: #1A1A1A; margin-bottom: 0.5rem;" data-lang-key="contact.faq4Question">Privacy concerns?</h3>
+                    <p style="color: #53735B; line-height: 1.6;"><span data-lang-key="contact.faq4Answer">LobeDrive collects zero data. Everything works offline. See our</span> <a href="privacy.html" style="color: #A5C49F; text-decoration: underline;" data-lang-key="contact.faq4LinkText">Privacy Policy</a> <span data-lang-key="contact.faq4AfterLink">for details.</span></p>
                 </div>
             </div>
         </div>
@@ -66,8 +76,8 @@
     <!-- CONTACT FORM SECTION -->
     <section id="contact" class="contact" style="padding-top: 2rem;">
         <div class="container">
-            <h2 class="section-headline">Still Need Help?</h2>
-            <p class="section-subheadline">Send us a message and we'll get back to you</p>
+            <h2 class="section-headline" data-lang-key="contact.contactHeadline">Still Need Help?</h2>
+            <p class="section-subheadline" data-lang-key="contact.contactSubheadline">Send us a message and we'll get back to you</p>
 
             <form
               id="contact-form"
@@ -78,32 +88,35 @@
               onsubmit="return handleContactSubmit(event)"
             >
               <div class="form-group">
-                <label for="contact-name">Name</label>
+                <label for="contact-name" data-lang-key="contact.nameLabel">Name</label>
                 <input
                   type="text"
                   id="contact-name"
                   name="entry.1221367212"
+                  data-lang-placeholder="contact.namePlaceholder"
                   placeholder="Your name"
                   required
                 />
               </div>
 
               <div class="form-group">
-                <label for="contact-email">Email</label>
+                <label for="contact-email" data-lang-key="contact.emailLabel">Email</label>
                 <input
                   type="email"
                   id="contact-email"
                   name="entry.1764075785"
+                  data-lang-placeholder="contact.emailPlaceholder"
                   placeholder="you@example.com"
                   required
                 />
               </div>
 
               <div class="form-group">
-                <label for="contact-message">Message</label>
+                <label for="contact-message" data-lang-key="contact.messageLabel">Message</label>
                 <textarea
                   id="contact-message"
                   name="entry.963489147"
+                  data-lang-placeholder="contact.messagePlaceholder"
                   placeholder="Your message"
                   rows="4"
                   required
@@ -130,7 +143,7 @@
                 />
               </div>
 
-              <button type="submit" class="btn btn-primary btn-large">
+              <button type="submit" class="btn btn-primary btn-large" data-lang-key="contact.submitButton">
                 Send Message
               </button>
             </form>
@@ -142,8 +155,8 @@
             ></iframe>
 
             <div id="contact-success" class="form-success" style="display: none;">
-                <h3>Thank you! We'll get back to you soon.</h3>
-                <p><a href="index.html" class="btn btn-primary" style="display: inline-block; margin-top: 1rem;">Back to Home</a></p>
+                <h3 data-lang-key="contact.successHeadline">Thank you! We'll get back to you soon.</h3>
+                <p><a href="index.html" class="btn btn-primary" style="display: inline-block; margin-top: 1rem;" data-lang-key="contact.successLink">Back to Home</a></p>
             </div>
         </div>
     </section>
@@ -153,16 +166,16 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-col">
-                    <h4>LobeDrive</h4>
-                    <p>A just-in-time coach that helps you choose clarity in real traffic conditions.</p>
+                    <h4 data-lang-key="footer.col1Heading">LobeDrive</h4>
+                    <p data-lang-key="footer.col1Text">Real-time support that keeps you focused and safe while driving.</p>
                 </div>
                 <div class="footer-col">
-                    <h4>Contact</h4>
-                    <p>Questions or partnerships?</p>
-                    <a href="contact.html" class="footer-link">Get in touch</a>
+                    <h4 data-lang-key="footer.col2Heading">Contact</h4>
+                    <p data-lang-key="footer.col2Text">Questions or partnerships?</p>
+                    <a href="contact.html" class="footer-link" data-lang-key="footer.col2Link">Get in touch</a>
                 </div>
                 <div class="footer-col">
-                    <h4>Follow Us</h4>
+                    <h4 data-lang-key="footer.col3Heading">Follow Us</h4>
                     <div class="social-links">
                         <a href="https://www.linkedin.com/in/jakob-sorensen-se/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-link">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -173,16 +186,19 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 LobeDrive. All rights reserved.</p>
+                <p data-lang-key="footer.copyright">&copy; 2025 LobeDrive. All rights reserved.</p>
                 <div class="footer-links">
-                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="privacy.html" data-lang-key="footer.privacyLink">Privacy Policy</a>
                     <span>|</span>
-                    <a href="terms.html">Terms of Service</a>
+                    <a href="terms.html" data-lang-key="footer.termsLink">Terms of Service</a>
                 </div>
             </div>
         </div>
     </footer>
 
+    <!-- Language switcher scripts (must load in this order) -->
+    <script src="assets/js/lang.js"></script>
+    <script src="assets/js/language-switcher.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
 </html>
