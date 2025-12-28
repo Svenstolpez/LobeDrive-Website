@@ -129,11 +129,19 @@ const lang = {
       successText: "In the meantime, follow us on LinkedIn for updates."
     },
 
-    // FAQ Section (partial - add more as needed)
+    // FAQ Section
     faq: {
       headline: "Frequently Asked Questions",
       q1: "Is this safe to use while driving?",
-      a1: "Yes. LobeDrive is designed with safety as the top priority. All interactions are hands-free or require a single tap on a large button. Audio messages are brief and do not require visual attention."
+      a1: "Yes. LobeDrive is designed with safety as the top priority. All interactions are hands-free or require a single tap on a large button. Audio messages are brief and do not require visual attention.",
+      q2: "Do I need an internet connection?",
+      a2: "No. All messages are stored locally on your device, so LobeDrive works anywhere.",
+      q3: "What devices does it work on?",
+      a3: "LobeDrive will launch first on iOS. Android support is planned for later.",
+      q4: "Is this a replacement for therapy?",
+      a4: "No. LobeDrive is a supportive tool based on therapeutic techniques, but it's not a substitute for professional mental health treatment.",
+      q5: "How much will it cost?",
+      a5: "Pricing will be announced closer to launch. Early waitlist members will receive special offers."
     }
   },
 
@@ -178,7 +186,7 @@ const lang = {
       paragraph2: "Din <strong>pannlob</strong> — den del som ansvarar för rationellt tänkande och självkontroll — blir åsidosatt.",
       paragraph3: "<strong>LobeDrive återaktiverar din pannlob.</strong> Ett snabbt erkännande. Ett ögonblick att återställa. En chans att återta kontrollen.",
       paragraph4: "Det är skillnaden mellan eskalering och kontroll.",
-      callout: "<strong>\"LobeDrive\" = Lob + Drive. Använd din pannlob. Kör smartare.</strong>"
+      callout: "<strong>\"LobeDrive\" = Lobe + Drive. Använd din pannlob. Kör smartare.</strong>"
     },
 
     // How It Works Section
@@ -257,11 +265,19 @@ const lang = {
       successText: "Under tiden, följ oss på LinkedIn för uppdateringar."
     },
 
-    // FAQ Section (partial - add more as needed)
+    // FAQ Section
     faq: {
       headline: "Vanliga frågor",
       q1: "Är det här säkert att använda när man kör?",
-      a1: "Ja. LobeDrive är designad med säkerhet som högsta prioritet. All interaktion är handsfree eller kräver ett enda tryck på en stor knapp. Ljudmeddelanden är korta och kräver inte visuell uppmärksamhet."
+      a1: "Ja. LobeDrive är designad med säkerhet som högsta prioritet. All interaktion är handsfree eller kräver ett ende tryck på en stor knapp. Ljudmeddelanden är korta och kräver inte visuell uppmärksamhet.",
+      q2: "Behöver jag en internetanslutning?",
+      a2: "Nej. Alla meddelanden lagras lokalt på din enhet, så LobeDrive fungerar överallt.",
+      q3: "Vilka enheter fungerar det på?",
+      a3: "LobeDrive lanseras först på iOS. Android-support är planerad till senare.",
+      q4: "Är detta en ersättning för terapi?",
+      a4: "Nej. LobeDrive är ett stödjande verktyg baserat på terapeutiska tekniker, men det är inte en ersättning för professionell psykisk hälsovård.",
+      q5: "Hur mycket kommer det att kosta?",
+      a5: "Prissättning meddelas närmare lansering. Tidiga medlemmar på väntelistan kommer att få speciella erbjudanden."
     }
   }
 };
