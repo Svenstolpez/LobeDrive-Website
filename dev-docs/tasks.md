@@ -127,6 +127,17 @@ This file tracks website updates, content changes, and maintenance tasks.
       - Added complete CSS styles (lines 688-770): responsive grid, white cards, custom arrow bullets
       - All language brand-compliant (no mindfulness/therapy terminology)
 
+- [x] **Fix Education Platform Section Layout for Visual Consistency**
+      Completed: 2025-12-28
+      Phase: V1 Launch
+      Owner: Jakob
+      Result:
+      - Centered column headings and decorative underlines
+      - Centered bullet lists within white cards (max-width: 350px, margin: auto)
+      - Maintained left-aligned text within lists for readability
+      - Improved visual harmony with rest of centered page layout
+      - Fixed aesthetic inconsistency between centered intro and left-aligned content
+
 ## Backlog (Post-V1)
 
 - [ ] Blog section for content marketing
