@@ -138,13 +138,33 @@ This file tracks website updates, content changes, and maintenance tasks.
       - Improved visual harmony with rest of centered page layout
       - Fixed aesthetic inconsistency between centered intro and left-aligned content
 
+- [x] **Complete Bilingual Support (Swedish/English)**
+      Completed: 2025-12-29
+      Phase: V1 Launch
+      Owner: Jakob
+      Result:
+      - Created lang.js translation data structure with complete Swedish/English content
+      - Implemented language-switcher.js with localStorage persistence
+      - Added language switcher UI component to navigation (flags + toggle)
+      - Translated all index.html content (hero, features, FAQ, footer, etc.)
+      - Fixed brand name spelling: "Lobe + Drive" (not "Lob + Drive")
+      - Implemented bilingual support for contact.html (support FAQ, contact form)
+      - Added SEO meta tags to all pages (hreflang, Open Graph, Twitter Card)
+      - Integrated pre-translated legal pages:
+        * privacy.html ↔ privacy_sv.html
+        * terms.html ↔ terms_sv.html
+      - Legal pages use separate static files (not JavaScript translation)
+      - All language switchers link correctly between EN/SV versions
+      - Footer links properly point to correct language versions
+      Commits: db319d9, 5d6ff97, ce2e758, bc85c9e, 1a7708f
+
 ## Backlog (Post-V1)
 
 - [ ] Blog section for content marketing
 - [ ] Case studies page
 - [ ] Video demos/tutorials
 - [ ] Partner showcase section
-- [ ] Multi-language support (English, Swedish, Danish)
+- [ ] Additional language support (Danish, Norwegian, Finnish)
 - [ ] Analytics integration
 - [ ] A/B testing framework
 
