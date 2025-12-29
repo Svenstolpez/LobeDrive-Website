@@ -42,6 +42,63 @@ body {
 }
 
 /* ===================================
+   SKIP LINK (ACCESSIBILITY)
+   =================================== */
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background-color: #A5C49F;
+    color: #1A1A1A;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 0 0 4px 0;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* ===================================
+   GLOBAL FOCUS INDICATORS (ACCESSIBILITY)
+   =================================== */
+
+/* Modern browsers: focus-visible (only shows on keyboard navigation) */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible {
+    outline: 2px solid #A5C49F;
+    outline-offset: 2px;
+}
+
+/* Fallback for older browsers that don't support :focus-visible */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus,
+[tabindex]:focus {
+    outline: 2px solid #A5C49F;
+    outline-offset: 2px;
+}
+
+/* Remove outline for mouse users in modern browsers */
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible),
+input:focus:not(:focus-visible),
+textarea:focus:not(:focus-visible),
+select:focus:not(:focus-visible),
+[tabindex]:focus:not(:focus-visible) {
+    outline: none;
+}
+
+/* ===================================
    TYPOGRAPHY
    =================================== */
 
@@ -335,7 +392,7 @@ section {
     display: inline-flex;
     align-items: center;
     gap: 4px; /* Minimal gap - arrow very close to text */
-    color: #53735B; /* Soft Sage */
+    color: #3d5449; /* Darker Forest Green for better contrast (WCAG AA) */
     font-size: 18px; /* Increased from 15px */
     font-weight: 500;
     text-decoration: none;
@@ -345,7 +402,7 @@ section {
 
 .hero-learn-more:hover {
     text-decoration: underline;
-    color: #5a7a6b; /* Soft Sage, slightly darker (10% darker) */
+    color: #2d3e35; /* Even darker on hover */
 }
 
 /* Arrow Icon - rotated to point down */
@@ -375,7 +432,7 @@ section {
     text-align: center;
     font-size: 1.25rem;
     font-style: italic;
-    color: #53735B;
+    color: #3d5449; /* Darker Forest Green for better contrast (WCAG AA) */
     margin-top: -1rem;
     margin-bottom: 2rem;
 }
@@ -1140,6 +1197,21 @@ section {
     font-weight: 500;
 }
 
+/* Required field indicator */
+.required-indicator {
+    color: #A5C49F;
+    font-weight: 600;
+    margin-left: 0.25rem;
+}
+
+/* Form error messages (accessible) */
+.form-error {
+    color: #d32f2f;
+    font-size: 0.875rem;
+    margin-top: 0.375rem;
+    display: block;
+}
+
 .form-group input,
 .form-group textarea {
     width: 100%;
@@ -1149,6 +1221,13 @@ section {
     font-size: 1rem;
     font-family: inherit;
     transition: border-color 0.3s ease;
+}
+
+/* Placeholder styling for better contrast (WCAG AA) */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #666666;
+    opacity: 1;
 }
 
 .form-group input:focus,
@@ -1408,6 +1487,20 @@ section {
 
     .nav-menu.active {
         left: 0;
+    }
+
+    /* FAS 2.8 - Touch targets ≥44px on mobile */
+    .nav-link {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.75rem 1rem;
+    }
+
+    .lang-switcher-btn {
+        min-height: 44px;
+        padding: 0.75rem 1.25rem;
     }
 
     /* Hero */

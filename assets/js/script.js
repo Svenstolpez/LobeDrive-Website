@@ -42,6 +42,25 @@ navLinks.forEach(link => {
     });
 });
 
+// Keyboard accessibility: Close mobile menu with Escape key and return focus
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && navMenu && navMenu.classList.contains('active')) {
+        navMenu.classList.remove('active');
+
+        // Reset hamburger icon
+        if (navToggle) {
+            const spans = navToggle.querySelectorAll('span');
+            spans.forEach(span => {
+                span.style.transform = '';
+                span.style.opacity = '';
+            });
+
+            // Return focus to toggle button
+            navToggle.focus();
+        }
+    }
+});
+
 // ===================================
 // SMOOTH SCROLLING FOR NAVIGATION
 // ===================================
@@ -418,14 +437,21 @@ document.addEventListener('DOMContentLoaded', function() {
             faqItems.forEach(otherItem => {
                 if (otherItem !== item) {
                     otherItem.classList.remove('active');
+                    // Update aria-expanded for other items
+                    const otherQuestion = otherItem.querySelector('.faq-question');
+                    if (otherQuestion) {
+                        otherQuestion.setAttribute('aria-expanded', 'false');
+                    }
                 }
             });
 
             // Toggle current item
             if (isActive) {
                 item.classList.remove('active');
+                question.setAttribute('aria-expanded', 'false');
             } else {
                 item.classList.add('active');
+                question.setAttribute('aria-expanded', 'true');
             }
         });
     });
@@ -518,6 +544,84 @@ function handleContactSubmit(event) {
 
   if (elapsed < MIN_SUBMIT_DELAY_MS) {
     event.preventDefault();
+    return false;
+  }
+
+  // Accessible form validation
+  const nameField = document.getElementById('contact-name');
+  const emailField = document.getElementById('contact-email');
+  const messageField = document.getElementById('contact-message');
+  const requiredFields = [
+    { field: nameField, name: 'Name' },
+    { field: emailField, name: 'Email' },
+    { field: messageField, name: 'Message' }
+  ];
+
+  let hasErrors = false;
+  let firstInvalidField = null;
+
+  // Clear previous errors
+  requiredFields.forEach(({ field }) => {
+    if (field) {
+      field.setAttribute('aria-invalid', 'false');
+      const errorId = field.id + '-error';
+      const existingError = document.getElementById(errorId);
+      if (existingError) existingError.remove();
+    }
+  });
+
+  // Validate each required field
+  requiredFields.forEach(({ field, name }) => {
+    if (!field || !field.value.trim()) {
+      hasErrors = true;
+      if (!firstInvalidField) firstInvalidField = field;
+
+      if (field) {
+        // Set aria-invalid
+        field.setAttribute('aria-invalid', 'true');
+
+        // Create error message
+        const errorId = field.id + '-error';
+        const errorMsg = document.createElement('div');
+        errorMsg.id = errorId;
+        errorMsg.className = 'form-error';
+        errorMsg.setAttribute('role', 'alert');
+        errorMsg.textContent = name + ' is required';
+
+        // Insert error after field
+        field.parentNode.appendChild(errorMsg);
+
+        // Associate error with field
+        field.setAttribute('aria-describedby', errorId);
+      }
+    }
+  });
+
+  // Email format validation
+  if (emailField && emailField.value.trim()) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(emailField.value.trim())) {
+      hasErrors = true;
+      if (!firstInvalidField) firstInvalidField = emailField;
+
+      emailField.setAttribute('aria-invalid', 'true');
+      const errorId = emailField.id + '-error';
+      const errorMsg = document.createElement('div');
+      errorMsg.id = errorId;
+      errorMsg.className = 'form-error';
+      errorMsg.setAttribute('role', 'alert');
+      errorMsg.textContent = 'Please enter a valid email address';
+      emailField.parentNode.appendChild(errorMsg);
+      emailField.setAttribute('aria-describedby', errorId);
+    }
+  }
+
+  if (hasErrors) {
+    event.preventDefault();
+    // Focus first invalid field
+    if (firstInvalidField) {
+      firstInvalidField.focus();
+    }
     return false;
   }
 
