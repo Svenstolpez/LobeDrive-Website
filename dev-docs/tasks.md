@@ -158,6 +158,25 @@ This file tracks website updates, content changes, and maintenance tasks.
       - Footer links properly point to correct language versions
       Commits: db319d9, 5d6ff97, ce2e758, bc85c9e, 1a7708f
 
+- [x] **Refine Swedish Copy for Idiomatic Quality and Brand Voice**
+      Completed: 2025-12-29
+      Phase: V1 Launch
+      Owner: Jakob (with Sofia Lindholm agent)
+      Result:
+      - Comprehensive rewrite of ALL Swedish website copy using English as strict master
+      - 234 total improvements (117 insertions, 117 deletions) across 3 files
+      - Files modified:
+        * assets/js/lang.js (58 changes to Swedish object)
+        * privacy_sv.html (92 changes to privacy policy)
+        * terms_sv.html (84 changes to terms of service)
+      - Key brand voice improvements:
+        * "Anmäl intresse" vs "Skriv upp dig" (more professional)
+        * "Återta klarheten" vs "Återställ klarhet" (stronger agency)
+        * "Kör säkrare" (imperative) over "köra säkrare" (infinitive)
+      - Improved natural Swedish flow while preserving legal GDPR terminology
+      - Enhanced clarity and calm-tech brand voice throughout
+      - Agent: Sofia Lindholm (Swedish copy specialist)
+
 ## Backlog (Post-V1)
 
 - [ ] Blog section for content marketing

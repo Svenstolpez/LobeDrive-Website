@@ -191,24 +191,24 @@ const lang = {
     // Meta & HTML attributes
     meta: {
       htmlLang: "sv",
-      description: "LobeDrive hjälper dig hantera vägraseri och körfrustration med evidensbaserad psykologi. Skriv upp dig för tidig tillgång.",
-      title: "LobeDrive - Återställ klarhet när irritationen slår till"
+      description: "LobeDrive hjälper dig hantera vägraseri och körfrustration med evidensbaserad psykologi. Anmäl ditt intresse för tidig tillgång.",
+      title: "LobeDrive - Återta klarheten när irritationen slår till"
     },
 
     // Navigation
     nav: {
       howItWorks: "Hur det fungerar",
       science: "Vetenskapen",
-      about: "Om oss",
+      about: "Om LobeDrive",
       contact: "Kontakt",
-      cta: "Skriv upp dig för att köra säkrare"
+      cta: "Anmäl intresse – kör säkrare"
     },
 
     // Hero Section
     hero: {
-      headline: "Återfå klarhet när irritationen slår till bakom ratten.",
-      subheadline: "En körassistent som hjälper dig välja klarhet i verkliga trafiksituationer.",
-      cta: "Skriv upp dig för att köra säkrare",
+      headline: "Återta klarheten i ögonblicket när irritationen slår till bakom ratten.",
+      subheadline: "En körcoach som hjälper dig välja klarhet i verkliga trafiksituationer.",
+      cta: "Anmäl intresse – kör säkrare",
       learnMore: "Se hur det fungerar"
     },
 
@@ -216,8 +216,8 @@ const lang = {
     problem: {
       headline: "Designad för en sak: att hjälpa dig köra säkrare.",
       subheading: "Ilskehantering för bilförare",
-      paragraph1: "Du står fast i trafiken. Någon kör om dig utan att blinka. Pulsen ökar. Käken spänns. Ilskan kommer snabbt — och plötsligt är du inte den lugna förare du vill vara.",
-      paragraph2: "Vägraseri är inte bara frustrerande. Det är farligt. Det påverkar ditt omdöme, dina reaktioner och din säkerhet. Och i det ögonblick när du behöver hjälp som mest finns det ingenting att vända sig till.",
+      paragraph1: "Du står stilla i trafiken. Någon kör om utan att blinka. Pulsen ökar. Käken spänns. Ilskan kommer snabbt – och plötsligt är du inte längre den lugna förare du vill vara.",
+      paragraph2: "Vägraseri är inte bara frustrerande. Det är farligt. Det påverkar ditt omdöme, dina reaktioner och din säkerhet. Och i det ögonblicket, när du behöver hjälp som mest, finns ingenting att vända sig till.",
       paragraph3: "Fram till nu."
     },
 
@@ -225,8 +225,8 @@ const lang = {
     brain: {
       headline: "Din hjärna under vägraseri.",
       paragraph1: "När ilskan slår till tar din <strong>amygdala</strong> (hjärnans larmsystem) över. Den är snabb, reaktiv och känslomässig.",
-      paragraph2: "Din <strong>pannlob</strong> — den del som ansvarar för rationellt tänkande och självkontroll — blir åsidosatt.",
-      paragraph3: "<strong>LobeDrive återaktiverar din pannlob.</strong> Ett snabbt erkännande. Ett ögonblick att återställa. En chans att återta kontrollen.",
+      paragraph2: "Din <strong>pannlob</strong> – den del som ansvarar för rationellt tänkande och självkontroll – skjuts åt sidan.",
+      paragraph3: "<strong>LobeDrive återaktiverar din pannlob.</strong> Ett kort erkännande. Ett ögonblick att återställa sig. En chans att återta kontrollen.",
       paragraph4: "Det är skillnaden mellan eskalering och kontroll.",
       callout: "<strong>\"LobeDrive\" = Lobe + Drive. Använd din pannlob. Kör smartare.</strong>"
     },
@@ -235,9 +235,9 @@ const lang = {
     howItWorks: {
       headline: "Hur och varför det fungerar",
       step1Title: "1. Tryck på knappen",
-      step1Text: "När frustrationen ökar aktiverar du stöd med ett tryck — eller använd din Bluetooth-knapp.",
+      step1Text: "När frustrationen ökar aktiverar du stöd med ett tryck – eller använd din Bluetooth-knapp.",
       step2Title: "2. Lyssna & reglera",
-      step2Text: "Ett kort meddelande hjälper dig pausa, få perspektiv och återta kontrollen.",
+      step2Text: "Ett kort, lugnande meddelande hjälper dig att pausa, få perspektiv och återta kontrollen.",
       step3Title: "3. Kör säkrare",
       step3Text: "Du väljer klarhet framför irritation. Du behåller kontrollen. Du fattar bättre beslut.",
       featuresHeadline: "Byggt på vetenskap",
@@ -251,14 +251,14 @@ const lang = {
       headline: "Bevisad att minska ilska. Designad för att hålla dig säker.",
       lead: "Forskning visar att riktade psykologiska interventioner kan minska förarens ilska med 35–50%.<sup>1</sup> Det betyder färre impulsiva beslut, bättre fokus och säkrare körning.",
       column1Heading: "Vad som driver LobeDrive:",
-      column1Item1: "<strong>Kognitiv beteendeterapi (KBT)</strong> — Utmana ilskadrivande tankar i realtid.",
-      column1Item2: "<strong>Kognitiv reglering</strong> — Pausa innan du reagerar och återta känslomässig kontroll.",
-      column1Item3: "<strong>Just-in-Time-interventioner (JIT)</strong> — Stöd levererat exakt när det behövs som mest.",
+      column1Item1: "<strong>Kognitiv beteendeterapi (KBT)</strong> – Utmana ilskadrivande tankar i realtid.",
+      column1Item2: "<strong>Kognitiv reglering</strong> – Pausa innan du reagerar och återta känslomässig kontroll.",
+      column1Item3: "<strong>Just-in-Time-interventioner (JIT)</strong> – Stöd levererat exakt när det behövs som mest.",
       column2Heading: "LobeDrive ger dig:",
       column2Item1: "<strong>Omedelbar klarhet</strong> när irritationen slår till",
-      column2Item2: "<strong>Skarpare fokus</strong> när distraktioner uppstår",
+      column2Item2: "<strong>Skarpare fokus</strong> när distraktioner dyker upp",
       column2Item3: "<strong>Säkrare val</strong> när känslorna driver på",
-      column2Item4: "<strong>Bestående färdigheter</strong> som förbättras med varje körning",
+      column2Item4: "<strong>Varaktiga färdigheter</strong> som förbättras med varje körning",
       footer: "<em>Baserat på beprövade metoder från kognitiv beteendeterapi, affektregleringsforskning och trafikpsykologiska studier.</em> <a href=\"references.html\" class=\"references-link\">Referenser<sup>1</sup></a>"
     },
 
@@ -275,47 +275,47 @@ const lang = {
       column2Heading: "Mobilappen hjälper dig tillämpa det:",
       column2Item1: "Realtidsinterventioner när irritationen slår till",
       column2Item2: "Minnestriggrar som förstärker det du lärt dig",
-      column2Item3: "Övning i faktiska körscenarier",
+      column2Item3: "Övning i verkliga körscenarier",
       column2Item4: "Bygg nya vanor för känsloreglering",
       ctaText: "Utbildningsplattformen lanseras efter appen. Var bland de första som får veta.",
-      ctaButton: "Skriv upp dig"
+      ctaButton: "Anmäl intresse"
     },
 
     // About/Founder Section
     about: {
       headline: "Från industrisäkerhet till trafikpsykologi",
       greeting: "Hej, jag heter Jakob.",
-      paragraph1: "Jag byggde min första säkerhetsinnovation för ett av de farligaste jobben: farlig lastning för lastbilsförare.",
+      paragraph1: "Jag byggde min första säkerhetsinnovation för ett av de farligaste jobben: riskfylld lastning för lastbilsförare.",
       paragraph2: "LUPNUMBER® har utbildat över <strong>1 miljon förare</strong> över hela Europa och hjälpt företag att minska säkerhetsincidenter. Det arbetet har räddat liv.",
-      paragraph3: "När jag lärde mig om psykologin bakom vägraseri och bristen på realtidsverktyg för att hjälpa förare, visste jag att jag kunde bygga något meningsfullt igen.",
-      mission: "<strong>LobeDrive är mitt nästa uppdrag: att ge evidensbaserade säkerhetsverktyg till vardagsförare som möter en av de vanligaste källorna till stress och fara — trafiken.</strong>",
-      linkedinLink: "Anslut på LinkedIn"
+      paragraph3: "När jag lärde mig om psykologin bakom vägraseri och såg bristen på realtidsverktyg för att hjälpa förare, visste jag att jag kunde bygga något meningsfullt igen.",
+      mission: "<strong>LobeDrive är mitt nästa uppdrag: att ge evidensbaserade säkerhetsverktyg till vardagsförare som möter en av de vanligaste källorna till stress och fara – trafiken.</strong>",
+      linkedinLink: "Följ på LinkedIn"
     },
 
     // Waitlist Section
     waitlist: {
       headline: "Var bland de första som kör med klarhet.",
-      subheadline: "LobeDrive är för närvarande i privat beta. Skriv upp dig för tidig tillgång, uppdateringar och en chans att forma framtiden för säker körning.",
+      subheadline: "LobeDrive är för närvarande i privat beta. Anmäl ditt intresse för tidig tillgång, uppdateringar och en chans att forma framtiden för säker körning.",
       nameLabel: "Namn",
       namePlaceholder: "Ditt namn",
       emailLabel: "E-post",
       emailPlaceholder: "du@exempel.se",
       interestLabel: "Varför är du intresserad?",
       interestPlaceholder: "Berätta vad som fick dig hit...",
-      submitButton: "Skriv upp dig för att köra säkrare",
+      submitButton: "Anmäl intresse – kör säkrare",
       successHeadline: "Tack! Vi hör av oss snart.",
-      successText: "Under tiden, följ oss på LinkedIn för uppdateringar."
+      successText: "Följ oss gärna på LinkedIn för uppdateringar."
     },
 
     // FAQ Section
     faq: {
       headline: "Vanliga frågor",
       q1: "Är det här säkert att använda när man kör?",
-      a1: "Ja. LobeDrive är designad med säkerhet som högsta prioritet. All interaktion är handsfree eller kräver ett ende tryck på en stor knapp. Ljudmeddelanden är korta och kräver inte visuell uppmärksamhet.",
+      a1: "Ja. LobeDrive är designad med säkerhet som högsta prioritet. All interaktion är handsfree eller kräver ett enda tryck på en stor knapp. Ljudmeddelanden är korta och kräver inte visuell uppmärksamhet.",
       q2: "Behöver jag en internetanslutning?",
       a2: "Nej. Alla meddelanden lagras lokalt på din enhet, så LobeDrive fungerar överallt.",
       q3: "Vilka enheter fungerar det på?",
-      a3: "LobeDrive lanseras först på iOS. Android-support är planerad till senare.",
+      a3: "LobeDrive lanseras först på iOS. Android-stöd är planerat till senare.",
       q4: "Är detta en ersättning för terapi?",
       a4: "Nej. LobeDrive är ett stödjande verktyg baserat på terapeutiska tekniker, men det är inte en ersättning för professionell psykisk hälsovård.",
       q5: "Hur mycket kommer det att kosta?",
