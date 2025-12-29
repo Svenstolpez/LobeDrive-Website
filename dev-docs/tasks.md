@@ -177,6 +177,24 @@ This file tracks website updates, content changes, and maintenance tasks.
       - Enhanced clarity and calm-tech brand voice throughout
       - Agent: Sofia Lindholm (Swedish copy specialist)
 
+- [x] **Add Bilingual Support to References Page**
+      Completed: 2025-12-29
+      Phase: V1 Launch
+      Owner: Jakob (with Sofia Lindholm agent)
+      Result:
+      - Created references_sv.html with Swedish translations
+      - Academic titles and citations remain in English (per requirements)
+      - Descriptions translated to natural Swedish
+      - Added SEO meta tags (hreflang, Open Graph, Twitter Card) to both versions
+      - Added language switcher to navigation in both versions
+      - Footer links correctly point to language-specific legal pages
+      - Key translations:
+        * "Vetenskapliga referenser som stödjer LobeDrives evidensbaserade metod"
+        * "KBT-baserade ilskainterventioner minskar aggressiv körning med ~35–50%"
+        * "Omfattande översikt av mekanismerna bakom vägaggression"
+      - Files: references.html (updated), references_sv.html (created)
+      - Commit: 569f032
+
 ## Backlog (Post-V1)
 
 - [ ] Blog section for content marketing

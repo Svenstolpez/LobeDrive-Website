@@ -15,7 +15,7 @@ This file tracks the website development roadmap and content updates.
 - [x] Update landing page (index.html) with V1 messaging (Completed: 2025-12-28)
 - [x] Ensure privacy.html is GDPR compliant (Completed: 2025-12-24)
 - [x] Verify terms.html is up to date (Completed: 2025-12-24)
-- [ ] Add references.html with scientific backing
+- [x] Add references.html with scientific backing (Completed: existing, bilingual support added 2025-12-29)
 - [x] Contact form functionality (contact.html) (Completed: existing Google Forms integration)
 
 ### Content Updates
