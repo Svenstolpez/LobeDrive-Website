@@ -17,6 +17,7 @@ This file tracks the website development roadmap and content updates.
 - [x] Verify terms.html is up to date (Completed: 2025-12-24)
 - [x] Add references.html with scientific backing (Completed: existing, bilingual support added 2025-12-29)
 - [x] Contact form functionality (contact.html) (Completed: existing Google Forms integration)
+- [x] Bluetooth setup guide (bluetooth-setup.html) (Completed: 2025-12-30, integrated into navigation, sitemap updated, translation markup cleaned)
 
 ### Content Updates
 - [x] Update hero section with clear value proposition (Completed: 2025-12-28)

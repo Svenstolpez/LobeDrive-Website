@@ -7,18 +7,7 @@ This file tracks website updates, content changes, and maintenance tasks.
 
 ### **Critical Priority (V1 Launch - Mandatory)**
 
-- [ ] **Create Bluetooth Setup Guide Page (V1 MANDATORY)**
-      Status: Not started
-      Phase: V1 Launch
-      Notes: Users need clear instructions for pairing Bluetooth button with app and car
-      Acceptance Criteria:
-      - Create dedicated page (e.g., bluetooth-setup.html or integrated in How It Works)
-      - Step-by-step pairing instructions (app → button → car)
-      - Troubleshooting section (connection fails, button not responding, etc.)
-      - Visual aids (screenshots, icons, diagrams)
-      - Emphasize hands-free safety benefit
-      - Link from main page and "How it works" section
-      - Mobile-responsive design
+*No critical tasks remaining*
 
 ### High Priority (V1 Launch)
 
@@ -75,6 +64,29 @@ This file tracks website updates, content changes, and maintenance tasks.
       Notes: Wait for user feedback
 
 ## Completed
+
+- [x] **Create Bluetooth Setup Guide Page (V1 MANDATORY)**
+      Completed: 2025-12-30
+      Phase: V1 Launch
+      Owner: Jakob (Technical Writer agent)
+      Result:
+      - Created comprehensive bluetooth-setup.html page
+      - 5-step pairing process: button pairing mode → phone Bluetooth → device selection → app detection → car audio connection
+      - 6 troubleshooting sections covering common issues (pairing mode, app trigger, audio playback, connection drops, status display, general support)
+      - Success verification section with visual indicators
+      - Prerequisites checklist
+      - Bilingual support (English/Swedish) via lang.js integration
+      - Brand-compliant design (Zen Green #A5C49F, Soft Sand #F7F4EF, calm-tech principles)
+      - Mobile-responsive with custom CSS styles
+      - Emphasizes hands-free safety benefit throughout
+      - Clear messaging: "Bluetooth button is optional, app works fully without it"
+      - Links to contact.html for additional support
+      - All copy follows @docs/BRAND.md tone (warm, grounded, direct, safety-first)
+      - Integrated into site navigation (contact.html FAQ, index.html inline link + footer, all bilingual)
+      - Added to sitemap.xml (priority 0.8)
+      - Refactored embedded HTML from translation strings (howItWorks.step1Text cleaned)
+      - SEO verified: proper metadata, heading hierarchy, internal linking, accessibility maintained
+      - Zero regressions: all previous brand compliance fixes intact
 
 - [x] **Verify Website Brand Guidelines Compliance**
       Completed: 2025-12-28

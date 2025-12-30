@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn how to set up your Bluetooth button with LobeDrive for hands-free, safer driving. Step-by-step pairing instructions and troubleshooting.">
+    <title>Bluetooth Setup Guide - LobeDrive</title>
+
+    <!-- SEO: Language alternates -->
+    <link rel="alternate" hreflang="en" href="https://lobedrive.com/bluetooth-setup.html" />
+    <link rel="alternate" hreflang="sv" href="https://lobedrive.com/bluetooth-setup.html" />
+    <link rel="alternate" hreflang="x-default" href="https://lobedrive.com/bluetooth-setup.html" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://lobedrive.com/bluetooth-setup.html" />
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lobedrive.com/bluetooth-setup.html">
+    <meta property="og:title" content="Bluetooth Setup Guide - LobeDrive">
+    <meta property="og:description" content="Learn how to set up your Bluetooth button with LobeDrive for hands-free, safer driving.">
+    <meta property="og:image" content="https://lobedrive.com/assets/images/og-image.png">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="sv_SE">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Bluetooth Setup Guide - LobeDrive">
+    <meta name="twitter:description" content="Step-by-step guide to pairing your Bluetooth button with LobeDrive for hands-free support while driving.">
+    <meta name="twitter:image" content="https://lobedrive.com/assets/images/og-image.png">
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Bluetooth setup page specific styles */
+        .setup-hero {
+            padding-top: 8rem;
+            padding-bottom: 3rem;
+            text-align: center;
+        }
+
+        .setup-intro {
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            text-align: center;
+            color: #53735B;
+            line-height: 1.7;
+        }
+
+        .setup-intro strong {
+            color: #1A1A1A;
+        }
+
+        .setup-section {
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+
+        .setup-section h3 {
+            color: #1A1A1A;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #E9ECEF;
+        }
+
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            background-color: #A5C49F;
+            color: #FFFFFF;
+            border-radius: 50%;
+            font-weight: 600;
+            font-size: 1rem;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+
+        .setup-step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background-color: #FFFFFF;
+            border-radius: 14px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .setup-step-content {
+            flex: 1;
+        }
+
+        .setup-step-content h4 {
+            color: #1A1A1A;
+            font-size: 1.125rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .setup-step-content p {
+            color: #53735B;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        .note-box {
+            background-color: #F7F4EF;
+            border-left: 4px solid #A5C49F;
+            padding: 1.25rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .note-box p {
+            margin-bottom: 0;
+            color: #53735B;
+            line-height: 1.6;
+        }
+
+        .note-box strong {
+            color: #1A1A1A;
+        }
+
+        .troubleshooting-item {
+            margin-bottom: 2rem;
+            padding: 1.25rem;
+            background-color: #FFFFFF;
+            border-radius: 14px;
+            border: 1px solid #E9ECEF;
+        }
+
+        .troubleshooting-item h4 {
+            color: #1A1A1A;
+            font-size: 1.125rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .troubleshooting-item ul {
+            margin-left: 1.5rem;
+            color: #53735B;
+            line-height: 1.7;
+        }
+
+        .troubleshooting-item li {
+            margin-bottom: 0.5rem;
+        }
+
+        .success-indicator {
+            display: flex;
+            align-items: center;
+            padding: 1.5rem;
+            background-color: #E8F5E9;
+            border-radius: 14px;
+            margin: 2rem 0;
+        }
+
+        .success-icon {
+            width: 48px;
+            height: 48px;
+            background-color: #A5C49F;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1.25rem;
+            flex-shrink: 0;
+        }
+
+        .success-icon svg {
+            width: 28px;
+            height: 28px;
+            stroke: #FFFFFF;
+            fill: none;
+            stroke-width: 3;
+        }
+
+        .success-text {
+            flex: 1;
+        }
+
+        .success-text h4 {
+            color: #1A1A1A;
+            margin-bottom: 0.5rem;
+        }
+
+        .success-text p {
+            color: #53735B;
+            margin-bottom: 0;
+        }
+
+        .cta-box {
+            text-align: center;
+            padding: 3rem 2rem;
+            background-color: #FFFFFF;
+            border-radius: 20px;
+            margin: 4rem auto;
+            max-width: 700px;
+        }
+
+        .cta-box h3 {
+            color: #1A1A1A;
+            margin-bottom: 1rem;
+        }
+
+        .cta-box p {
+            color: #53735B;
+            margin-bottom: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .setup-hero {
+                padding-top: 6rem;
+            }
+
+            .setup-step {
+                flex-direction: column;
+            }
+
+            .step-number {
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip navigation link for accessibility -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="assets/images/logo_2_zen_wheel_clean.svg" alt="LobeDrive" height="40">
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html#problem" class="nav-link" data-lang-key="nav.howItWorks">How It Works</a></li>
+                <li><a href="index.html#science" class="nav-link" data-lang-key="nav.science">The Science</a></li>
+                <li><a href="index.html#about" class="nav-link" data-lang-key="nav.about">About</a></li>
+                <li><a href="contact.html" class="nav-link" data-lang-key="nav.contact">Contact</a></li>
+                <li><a href="index.html#waitlist" class="nav-link nav-cta" data-lang-key="nav.cta">Join the Waitlist to Drive Safer</a></li>
+                <li class="lang-switcher">
+                    <button class="lang-switcher-btn" data-lang="sv" aria-label="Switch to Swedish">
+                        <span class="flag">🇸🇪</span>
+                        <span>Svenska</span>
+                    </button>
+                    <button class="lang-switcher-btn" data-lang="en" aria-label="Switch to English">
+                        <span class="flag">🇬🇧</span>
+                        <span>English</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main content wrapper for accessibility -->
+    <main id="main-content">
+
+    <!-- HERO SECTION -->
+    <section class="setup-hero">
+        <div class="container">
+            <h1 class="section-headline" data-lang-key="bluetoothSetup.headline">Bluetooth Button Setup Guide</h1>
+            <div class="setup-intro">
+                <p data-lang-key="bluetoothSetup.intro"><strong>Hands-free support when you need it.</strong> The Bluetooth button lets you activate LobeDrive without touching your phone—safer, faster, and with zero distraction.</p>
+                <p data-lang-key="bluetoothSetup.optional"><em>Note: The Bluetooth button is optional. The app works fully without it using the in-app button. Using a mobile phone while driving may be restricted or prohibited by law. A physical button can help you activate LobeDrive without picking up or looking at your mobile phone.</em></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Zen Waves Divider -->
+    <div class="zen-waves-container">
+        <img src="assets/images/element_zen_waves_wide.svg" alt="" class="zen-waves-divider">
+    </div>
+
+    <!-- PREREQUISITES SECTION -->
+    <section class="setup-section">
+        <div class="container">
+            <h3 data-lang-key="bluetoothSetup.prerequisitesHeading">Before You Start</h3>
+
+            <div class="note-box">
+                <p data-lang-key="bluetoothSetup.prerequisitesText"><strong>You'll need:</strong><br>
+                • Your Bluetooth button (any standard Bluetooth remote button)<br>
+                • Your smartphone with Bluetooth enabled<br>
+                • The LobeDrive app installed<br>
+                • 5 minutes to complete pairing</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAIRING STEPS SECTION -->
+    <section class="setup-section">
+        <div class="container">
+            <h3 data-lang-key="bluetoothSetup.pairingHeading">Step-by-Step Pairing</h3>
+
+            <!-- Step 1 -->
+            <div class="setup-step">
+                <div class="step-number">1</div>
+                <div class="setup-step-content">
+                    <h4 data-lang-key="bluetoothSetup.step1Title">Enable Pairing Mode on Your Button</h4>
+                    <p data-lang-key="bluetoothSetup.step1Text">Press and hold the button on your Bluetooth remote for 3-5 seconds until the LED indicator starts flashing (usually blue or alternating colors). This means the button is ready to pair.</p>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="setup-step">
+                <div class="step-number">2</div>
+                <div class="setup-step-content">
+                    <h4 data-lang-key="bluetoothSetup.step2Title">Open Bluetooth Settings on Your Phone</h4>
+                    <p data-lang-key="bluetoothSetup.step2Text"><strong>iOS:</strong> Settings → Bluetooth → turn Bluetooth ON<br>
+                    <strong>Android:</strong> Settings → Connected devices → Bluetooth → turn Bluetooth ON</p>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="setup-step">
+                <div class="step-number">3</div>
+                <div class="setup-step-content">
+                    <h4 data-lang-key="bluetoothSetup.step3Title">Select Your Button from Available Devices</h4>
+                    <p data-lang-key="bluetoothSetup.step3Text">Your button should appear in the list of available devices (often named "BT Remote", "Media Button", or similar). Tap it to connect. You may see "Connected" or "Paired" confirmation.</p>
+                </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="setup-step">
+                <div class="step-number">4</div>
+                <div class="setup-step-content">
+                    <h4 data-lang-key="bluetoothSetup.step4Title">Open the LobeDrive App</h4>
+                    <p data-lang-key="bluetoothSetup.step4Text">The app will automatically detect the button after the first press. No additional in-app pairing is needed—just press the button once while the app is open.</p>
+                </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="setup-step">
+                <div class="step-number">5</div>
+                <div class="setup-step-content">
+                    <h4 data-lang-key="bluetoothSetup.step5Title">Connect Your Car's Bluetooth Audio</h4>
+                    <p data-lang-key="bluetoothSetup.step5Text">Pair your phone with your car's Bluetooth system (if not already connected). This ensures LobeDrive's audio messages play through your car speakers. In your car: Settings → Bluetooth → select your phone → Connect.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SUCCESS VERIFICATION SECTION -->
+    <section class="setup-section">
+        <div class="container">
+            <h3 data-lang-key="bluetoothSetup.verificationHeading">Verify Your Setup Works</h3>
+
+            <div class="success-indicator">
+                <div class="success-icon">
+                    <svg viewBox="0 0 24 24">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                </div>
+                <div class="success-text">
+                    <h4 data-lang-key="bluetoothSetup.successTitle">Test It Now</h4>
+                    <p data-lang-key="bluetoothSetup.successText">Press your Bluetooth button. You should hear a LobeDrive message through your car speakers. The app's home screen should show "Bluetooth button connected" in green.</p>
+                </div>
+            </div>
+
+            <div class="note-box">
+                <p data-lang-key="bluetoothSetup.statusNote"><strong>Connection status indicators in the app:</strong><br>
+                🟢 <strong>Connected</strong> — Button detected and working<br>
+                🟡 <strong>Searching</strong> — Waiting for first button press<br>
+                ⚪ <strong>Not connected</strong> — No button activity detected</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Zen Waves Divider -->
+    <div class="zen-waves-container">
+        <img src="assets/images/element_zen_waves_wide.svg" alt="" class="zen-waves-divider">
+    </div>
+
+    <!-- TROUBLESHOOTING SECTION -->
+    <section class="setup-section">
+        <div class="container">
+            <h3 data-lang-key="bluetoothSetup.troubleshootingHeading">Troubleshooting</h3>
+
+            <!-- Issue 1 -->
+            <div class="troubleshooting-item">
+                <h4 data-lang-key="bluetoothSetup.issue1Title">Button won't enter pairing mode</h4>
+                <ul>
+                    <li data-lang-key="bluetoothSetup.issue1Fix1">Check if the button has battery power (replace battery if needed)</li>
+                    <li data-lang-key="bluetoothSetup.issue1Fix2">Hold the button longer (some buttons require 5-10 seconds)</li>
+                    <li data-lang-key="bluetoothSetup.issue1Fix3">Consult your button's user manual for specific pairing instructions</li>
+                </ul>
+            </div>
+
+            <!-- Issue 2 -->
+            <div class="troubleshooting-item">
+                <h4 data-lang-key="bluetoothSetup.issue2Title">Button pairs but doesn't trigger the app</h4>
+                <ul>
+                    <li data-lang-key="bluetoothSetup.issue2Fix1">Make sure LobeDrive is running (open the app)</li>
+                    <li data-lang-key="bluetoothSetup.issue2Fix2">Check that Bluetooth permissions are enabled for LobeDrive in Settings → LobeDrive → Bluetooth</li>
+                    <li data-lang-key="bluetoothSetup.issue2Fix3">Try disconnecting and reconnecting the button in your phone's Bluetooth settings</li>
+                    <li data-lang-key="bluetoothSetup.issue2Fix4">Restart the app and try again</li>
+                </ul>
+            </div>
+
+            <!-- Issue 3 -->
+            <div class="troubleshooting-item">
+                <h4 data-lang-key="bluetoothSetup.issue3Title">No audio playing through car speakers</h4>
+                <ul>
+                    <li data-lang-key="bluetoothSetup.issue3Fix1">Verify your phone is connected to your car's Bluetooth audio system</li>
+                    <li data-lang-key="bluetoothSetup.issue3Fix2">Check your car's audio source is set to "Bluetooth" (not FM, USB, etc.)</li>
+                    <li data-lang-key="bluetoothSetup.issue3Fix3">Increase phone volume and car volume</li>
+                    <li data-lang-key="bluetoothSetup.issue3Fix4">Test by playing music from your phone—if that works, LobeDrive audio will too</li>
+                </ul>
+            </div>
+
+            <!-- Issue 4 -->
+            <div class="troubleshooting-item">
+                <h4 data-lang-key="bluetoothSetup.issue4Title">Connection drops frequently</h4>
+                <ul>
+                    <li data-lang-key="bluetoothSetup.issue4Fix1">Make sure the button is within range (typically 10 meters / 30 feet)</li>
+                    <li data-lang-key="bluetoothSetup.issue4Fix2">Replace the button's battery if it's low</li>
+                    <li data-lang-key="bluetoothSetup.issue4Fix3">Forget the device in Bluetooth settings and re-pair from scratch</li>
+                    <li data-lang-key="bluetoothSetup.issue4Fix4">Close other Bluetooth-heavy apps that might interfere</li>
+                </ul>
+            </div>
+
+            <!-- Issue 5 -->
+            <div class="troubleshooting-item">
+                <h4 data-lang-key="bluetoothSetup.issue5Title">App shows "Not connected" even after pairing</h4>
+                <ul>
+                    <li data-lang-key="bluetoothSetup.issue5Fix1">Press the button once while the app is open—the app detects the button on first press</li>
+                    <li data-lang-key="bluetoothSetup.issue5Fix2">Wait up to 30 seconds after pressing for the status to update</li>
+                    <li data-lang-key="bluetoothSetup.issue5Fix3">Check that the button is still paired in your phone's Bluetooth settings</li>
+                </ul>
+            </div>
+
+            <!-- Issue 6 -->
+            <div class="troubleshooting-item">
+                <h4 data-lang-key="bluetoothSetup.issue6Title">Still having issues?</h4>
+                <ul>
+                    <li data-lang-key="bluetoothSetup.issue6Fix1">Visit our <a href="contact.html" style="color: #A5C49F; text-decoration: underline;">Support page</a> for additional help</li>
+                    <li data-lang-key="bluetoothSetup.issue6Fix2">Remember: You can always use the in-app button—LobeDrive works fully without Bluetooth</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA BOX -->
+    <section class="setup-section">
+        <div class="container">
+            <div class="cta-box">
+                <h3 data-lang-key="bluetoothSetup.ctaHeading">Ready to Drive Safer?</h3>
+                <p data-lang-key="bluetoothSetup.ctaText">Your Bluetooth button is set up and ready. Now every press is a conscious choice for clarity and control.</p>
+                <a href="index.html" class="btn btn-primary" data-lang-key="bluetoothSetup.ctaButton">Back to Home</a>
+            </div>
+        </div>
+    </section>
+
+    </main>
+    <!-- End main content -->
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4 data-lang-key="footer.col1Heading">LobeDrive</h4>
+                    <p data-lang-key="footer.col1Text">Real-time support that keeps you focused and safe while driving.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 data-lang-key="footer.col2Heading">Contact</h4>
+                    <p data-lang-key="footer.col2Text">Questions or partnerships?</p>
+                    <a href="contact.html" class="footer-link" data-lang-key="footer.col2Link">Get in touch</a>
+                </div>
+                <div class="footer-col">
+                    <h4 data-lang-key="footer.col3Heading">Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/jakob-sorensen-se/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in new tab)" class="social-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-lang-key="footer.copyright">&copy; 2025 LobeDrive. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="privacy.html" data-lang-key="footer.privacyLink">Privacy Policy</a>
+                    <span>|</span>
+                    <a href="terms.html" data-lang-key="footer.termsLink">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Language switcher scripts (must load in this order) -->
+    <script src="assets/js/lang.js"></script>
+    <script src="assets/js/language-switcher.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

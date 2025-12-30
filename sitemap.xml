@@ -17,6 +17,14 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Bluetooth Setup Guide -->
+  <url>
+    <loc>https://lobedrive.com/bluetooth-setup.html</loc>
+    <lastmod>2025-12-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- References (English) -->
   <url>
     <loc>https://lobedrive.com/references.html</loc>
