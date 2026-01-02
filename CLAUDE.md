@@ -124,3 +124,15 @@ Public-facing marketing website for LobeDrive.
 - **Market positioning:** @startup/business/brand-position.md
 - **Customer segments:** @startup/business/customer-segments.md
 - **Coach methodology:** @startup/coach-concept.md
+
+## UI/UX Skill Library: ui-ux-pro-max
+
+This repository includes a local UI/UX design intelligence skill.
+
+Use it ONLY when working on:
+- UI layout, visual hierarchy, spacing, typography
+- Landing pages, components, dashboards
+- UX flows, accessibility, and UI anti-pattern reviews
+
+Local search (optional):
+python3 .claude/skills/ui-ux-pro-max/scripts/search.py "<query>" --domain <domain> -n 10
