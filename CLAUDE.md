@@ -1,13 +1,22 @@
 # LobeDrive Website - Claude Code Context
 
+**Version:** 2.0 (Governance Realignment - January 2026)
+
+**⚠️ GOVERNANCE HIERARCHY:**
+This file contains **web-specific constraints only**.
+
+**All governance defers to:**
+- **`/CLAUDE.md`** (supreme authority - monorepo root)
+- `startup/dev-docs/context.md` (product identity)
+- `docs/BRAND.md` (brand guidelines)
+- `startup/business/brand-position.md` (market positioning)
+
+**In case of conflict, `/CLAUDE.md` wins.**
+
+---
+
 ## Purpose
 Public-facing marketing website for LobeDrive.
-
-## Repository Context
-- **Parent monorepo:** @CLAUDE.md
-- **Brand guidelines:** @docs/BRAND.md
-- **Strategic positioning:** @startup/business/brand-position.md
-- **Product identity:** @startup/dev-docs/context.md
 
 ## Technical Architecture
 
@@ -125,14 +134,14 @@ Public-facing marketing website for LobeDrive.
 - **Customer segments:** @startup/business/customer-segments.md
 - **Coach methodology:** @startup/coach-concept.md
 
-## UI/UX Skill Library: ui-ux-pro-max
+## Claude Agents and Skills
 
-This repository includes a local UI/UX design intelligence skill.
+**Governance location:** See `/CLAUDE.md` Section 5 for agent and skill system.
 
-Use it ONLY when working on:
-- UI layout, visual hierarchy, spacing, typography
-- Landing pages, components, dashboards
-- UX flows, accessibility, and UI anti-pattern reviews
+**Web-specific notes:**
+- All general agents and skills apply
+- No web-specific agents or skills at this time
 
-Local search (optional):
-python3 .claude/skills/ui-ux-pro-max/scripts/search.py "<query>" --domain <domain> -n 10
+**UI/UX Skill:**
+- `ui-ux-pro-max` skill available at `.claude/skills/ui-ux-pro-max/`
+- Use for visual hierarchy, spacing, typography, accessibility, landing page design, and responsive layouts
