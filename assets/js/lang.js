@@ -28,8 +28,11 @@ const lang = {
 
     // Hero Section
     hero: {
-      headline: "Regain clarity the moment irritation spikes behind the wheel.",
-      subheadline: "A just-in-time coach that helps you choose clarity in real traffic conditions.",
+      headline: "Drive safer when frustration strikes.",
+      subheadline: "Real-time coaching that restores clarity in seconds.",
+      flowStep1: "Irritation spikes",
+      flowStep2: "Press button",
+      flowStep3: "Clarity returns",
       cta: "Join the Waitlist to Drive Safer",
       learnMore: "Learn how it works"
     },
@@ -265,8 +268,11 @@ const lang = {
 
     // Hero Section
     hero: {
-      headline: "Återta klarheten i ögonblicket när irritationen slår till bakom ratten.",
-      subheadline: "En körcoach som hjälper dig välja klarhet i verkliga trafiksituationer.",
+      headline: "Kör säkrare när frustrationen slår till.",
+      subheadline: "Realtidscoaching som ger dig klarhet på sekunder.",
+      flowStep1: "Irritationen toppar",
+      flowStep2: "Tryck på knappen",
+      flowStep3: "Klarheten återkommer",
       cta: "Anmäl intresse – kör säkrare",
       learnMore: "Se hur det fungerar"
     },

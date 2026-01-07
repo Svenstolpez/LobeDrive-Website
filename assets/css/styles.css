@@ -146,7 +146,19 @@ a:hover {
 }
 
 section {
-    padding: 5rem 0;
+    padding: 5rem 0;  /* Default for supporting sections */
+}
+
+/* Primary sections - increased breathing room */
+.hero,
+.science,
+.waitlist {
+    padding: 7rem 0;  /* 112px - premium feel */
+}
+
+/* Compact sections */
+.faq {
+    padding: 4rem 0;  /* 64px - lighter weight */
 }
 
 /* ===================================
@@ -345,8 +357,9 @@ section {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(135deg, #F5F1E8 0%, #FFFFFF 100%);
-    padding-top: 80px;
+    background: #F7F4EF;  /* Solid Soft Sand - calm, consistent */
+    padding: 7rem 0;  /* 112px - increased from 5rem for premium feel */
+    padding-top: calc(7rem + 80px);  /* Account for fixed nav */
 }
 
 .hero-content {
@@ -355,16 +368,94 @@ section {
 }
 
 .hero-headline {
-    font-size: 3rem;
-    margin-bottom: 24px; /* Headline → Subheadline spacing */
-    color: #333333;
+    font-size: 2.5rem;  /* 40px - reduced from 3rem */
+    font-weight: 500;  /* Medium - reduced from 600 */
+    line-height: 1.25;
+    max-width: 680px;
+    margin: 0 auto 40px auto;  /* Increased bottom margin */
+    color: #1A1A1A;  /* Deep Ink - darker than #333 */
 }
 
 .hero-subheadline {
-    font-size: 1.25rem;
+    font-size: 1.125rem;  /* 18px - reduced from 1.25rem */
+    font-weight: 400;
+    line-height: 1.7;
+    max-width: 600px;
+    margin: 0 auto 56px auto;  /* Increased spacing */
     color: #666666;
-    margin-bottom: 32px; /* Subheadline → CTA button spacing */
-    line-height: 1.8;
+}
+
+/* ===================================
+   HERO VISUAL FLOW DIAGRAM
+   =================================== */
+
+.hero-visual-flow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    max-width: 800px;
+    margin: 48px auto;  /* Positioned between headline and subheadline */
+}
+
+.flow-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.flow-icon-circle {
+    width: 160px;
+    height: 160px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    position: relative;
+}
+
+.flow-icon-brain-rage,
+.flow-icon-brain-calm {
+    width: 120px;
+    height: 120px;
+}
+
+.flow-icon-handsfree {
+    width: 100px;
+    height: 100px;
+}
+
+.flow-label {
+    font-size: 0.875rem;  /* 14px */
+    font-weight: 500;
+    color: #1A1A1A;
+    text-align: center;
+    max-width: 140px;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.flow-arrow {
+    flex-shrink: 0;
+    margin: 0 -8px;  /* Slight overlap for visual tightness */
+}
+
+/* Screen reader only utility */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
 
 /* Hero CTA Stack - vertical layout */
@@ -391,9 +482,9 @@ section {
 .hero-learn-more {
     display: inline-flex;
     align-items: center;
-    gap: 4px; /* Minimal gap - arrow very close to text */
-    color: #3d5449; /* Darker Forest Green for better contrast (WCAG AA) */
-    font-size: 18px; /* Increased from 15px */
+    gap: 6px;
+    color: #53735B;  /* Forest Line - calmer than previous */
+    font-size: 16px;  /* Reduced from 18px */
     font-weight: 500;
     text-decoration: none;
     cursor: pointer;
@@ -402,20 +493,19 @@ section {
 
 .hero-learn-more:hover {
     text-decoration: underline;
-    color: #2d3e35; /* Even darker on hover */
+    color: #3d5449;
 }
 
-/* Arrow Icon - rotated to point down */
-.arrow-icon {
-    width: 90px; /* Very prominent arrow for strong visual cue */
-    height: 90px;
-    transform: rotate(90deg); /* Rotate from right-pointing to down-pointing */
-    transition: transform 0.3s ease;
-    flex-shrink: 0; /* Prevent arrow from shrinking */
+/* Arrow Icon - minimal chevron-down */
+.arrow-icon-small {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
 }
 
-.hero-learn-more:hover .arrow-icon {
-    transform: rotate(90deg) translateY(5px); /* More pronounced bounce with larger arrow */
+.hero-learn-more:hover .arrow-icon-small {
+    transform: translateY(2px);  /* Subtle downward movement */
 }
 
 /* ===================================
@@ -479,8 +569,8 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
-    margin: 3rem auto;
+    gap: 3rem;  /* Increased from 2rem - more breathing room */
+    margin: 4rem auto;  /* Increased from 3rem - premium spacing */
     max-width: 900px;
 }
 
@@ -720,10 +810,11 @@ section {
 }
 
 .column-underline {
-    width: 65%;
+    width: 60%;  /* Reduced from 65% - more delicate */
     height: auto;
-    opacity: 0.6;
+    opacity: 0.5;  /* Reduced from 0.6 - more subtle */
     display: block;
+    margin-bottom: 0.25rem;  /* Small gap for breathing room */
 }
 
 /* Clean text list - no cards */
@@ -1506,37 +1597,70 @@ section {
     /* Hero */
     .hero {
         min-height: auto;
-        padding: 6rem 0 4rem;
+        padding: 4rem 0;  /* Reduced from 7rem */
+        padding-top: calc(4rem + 80px);  /* Account for fixed nav */
     }
 
     .hero-headline {
-        font-size: 2rem;
+        font-size: 2rem;  /* 32px - reduced from 2.5rem */
+        margin-bottom: 32px;
     }
 
     .hero-subheadline {
-        font-size: 1.125rem;
-        margin-bottom: 28px; /* Slightly reduce spacing on mobile */
+        font-size: 1rem;  /* 16px - reduced from 1.125rem */
+        margin-bottom: 48px;
+    }
+
+    /* Visual Flow Diagram - mobile: vertical stack */
+    .hero-visual-flow {
+        flex-direction: column;
+        gap: 16px;
+        margin: 32px auto;
+    }
+
+    .flow-arrow {
+        transform: rotate(90deg);  /* Point down instead of right */
+        margin: -8px 0;
+    }
+
+    .flow-icon-circle {
+        width: 140px;
+        height: 140px;
+    }
+
+    .flow-icon-brain-rage,
+    .flow-icon-brain-calm {
+        width: 100px;
+        height: 100px;
+    }
+
+    .flow-icon-handsfree {
+        width: 80px;
+        height: 80px;
+    }
+
+    .flow-label {
+        font-size: 0.75rem;  /* 12px */
     }
 
     /* Hero CTA Stack - mobile */
     .hero-cta-stack {
-        gap: 14px; /* Slightly reduce gap on mobile */
+        gap: 14px;
     }
 
     .btn-hero {
-        height: 48px; /* Slightly smaller on mobile */
+        height: 48px;
         padding: 0 20px;
         font-size: 1rem;
     }
 
     .hero-learn-more {
-        font-size: 16px; /* Increased from 14px */
-        gap: 3px; /* Minimal gap on mobile - arrow very close to text */
+        font-size: 16px;
     }
 
-    .arrow-icon {
-        width: 60px; /* Very prominent arrow on mobile too */
-        height: 60px;
+    .arrow-icon-small {
+        width: 16px;
+        height: 16px;
     }
 
     /* Sections */
@@ -1738,19 +1862,19 @@ section {
 /* Road Horizon Divider */
 .road-divider-container {
     width: 100%;
-    padding: 30px 0;
+    padding: 80px 0;  /* Increased from 30px - architectural weight */
     text-align: center;
-    background: #F5F1E8; /* Warm Beige */
+    background: #F7F4EF;  /* Soft Sand - consistent with hero */
     overflow: hidden;
 }
 
 .road-divider {
     width: 100%;
+    max-width: 1200px;  /* Contained width, not full bleed */
     height: auto;
     display: block;
     margin: 0 auto;
-    opacity: 0.5;
-    min-width: 100%; /* Ensure full width coverage */
+    opacity: 0.35;  /* Reduced from 0.5 - more subtle */
 }
 
 /* ===================================
@@ -1762,21 +1886,7 @@ section {
     position: relative;
 }
 
-/* Breathing circles in hero */
-.breathing-circles-hero {
-    position: absolute;
-    top: 50%;
-    right: 10%;
-    transform: translateY(-50%);
-    width: 400px;
-    height: 400px;
-    background-image: url('../images/icon_breathing.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    opacity: 0.3;
-    pointer-events: none;
-    z-index: 0;
-}
+/* Breathing circles removed - calm-tech refinement */
 
 /* Hero content on top */
 .hero-content {
@@ -1816,17 +1926,30 @@ section {
    =================================== */
 
 @media (max-width: 768px) {
+    /* Primary section padding adjustments for mobile */
+    .science,
+    .waitlist {
+        padding: 4rem 0;  /* Reduced from 7rem */
+    }
+
+    /* Road divider mobile spacing */
     .road-divider-container {
-        padding: 20px 0;
+        padding: 3rem 0;  /* Reduced from 80px */
     }
 
     .road-divider {
-        opacity: 0.6; /* Slightly more visible on mobile */
+        opacity: 0.35;  /* Maintain desktop opacity */
     }
 
+    /* Brain illustrations mobile spacing */
+    .brain-illustrations-container {
+        gap: 2rem;  /* Reduced from 3rem */
+        margin: 2.5rem auto;  /* Reduced from 4rem */
+    }
+
+    /* Breathing circles hero - removed (no longer exists) */
     .breathing-circles-hero {
-        width: 250px;
-        height: 250px;
+        display: none;
         right: 5%;
         opacity: 0.2;
     }

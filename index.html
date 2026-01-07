@@ -74,19 +74,53 @@
 
     <!-- SECTION 1: HERO -->
     <section id="hero" class="hero hero-section">
-        <!-- Breathing circles background -->
-        <div class="breathing-circles breathing-circles-hero"></div>
-
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-headline" data-lang-key="hero.headline">Regain clarity the moment irritation spikes behind the wheel.</h1>
-                <p class="hero-subheadline" data-lang-key="hero.subheadline">A just-in-time coach that helps you choose clarity in real traffic conditions.</p>
+                <h1 class="hero-headline" data-lang-key="hero.headline">Drive safer when frustration strikes.</h1>
+
+                <!-- Visual Flow Diagram -->
+                <figure class="hero-visual-flow" aria-label="Three-step process: irritation spikes, press button, clarity returns">
+                    <div class="flow-step">
+                        <div class="flow-icon-circle">
+                            <img src="assets/images/brainroadrage.svg" alt="" class="flow-icon-brain-rage">
+                        </div>
+                        <p class="flow-label" data-lang-key="hero.flowStep1">Irritation spikes</p>
+                    </div>
+
+                    <svg class="flow-arrow" width="60" height="24" viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M20 50 Q100 30, 180 50" stroke="#A5C49F" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.4"/>
+                        <path d="M170 40 L190 50 L170 60" stroke="#A5C49F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.4"/>
+                    </svg>
+
+                    <div class="flow-step">
+                        <div class="flow-icon-circle">
+                            <img src="assets/images/handsfree.svg" alt="" class="flow-icon-handsfree">
+                        </div>
+                        <p class="flow-label" data-lang-key="hero.flowStep2">Press button</p>
+                    </div>
+
+                    <svg class="flow-arrow" width="60" height="24" viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M20 50 Q100 30, 180 50" stroke="#A5C49F" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.4"/>
+                        <path d="M170 40 L190 50 L170 60" stroke="#A5C49F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.4"/>
+                    </svg>
+
+                    <div class="flow-step">
+                        <div class="flow-icon-circle">
+                            <img src="assets/images/calmbrain.svg" alt="" class="flow-icon-brain-calm">
+                        </div>
+                        <p class="flow-label" data-lang-key="hero.flowStep3">Clarity returns</p>
+                    </div>
+
+                    <figcaption class="sr-only">LobeDrive works in three steps: when irritation spikes, you press a button (either Bluetooth or in-app), and clarity returns immediately.</figcaption>
+                </figure>
+
+                <p class="hero-subheadline" data-lang-key="hero.subheadline">Real-time coaching that restores clarity in seconds.</p>
+
                 <div class="hero-cta-stack">
                     <a href="#waitlist" class="btn btn-primary btn-hero" data-lang-key="hero.cta">Join the Waitlist to Drive Safer</a>
                     <a href="#problem" class="hero-learn-more">
-                        <svg width="20" height="20" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" class="arrow-icon">
-                            <path d="M60 80 Q95 100, 130 80" stroke="currentColor" stroke-width="4" stroke-linecap="round" fill="none"/>
-                            <path d="M120 68 L140 80 L120 92" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        <svg class="arrow-icon-small" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                         <span data-lang-key="hero.learnMore">Learn how it works</span>
                     </a>

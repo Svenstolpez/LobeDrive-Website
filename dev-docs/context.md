@@ -76,7 +76,7 @@ All website copy must follow:
 
 **Visual elements from @web/Docs/:**
 - logo_2_zen_wheel_clean.svg (header)
-- brain_enso.svg (hero section)
+- brainroadrage.svg, handsfree.svg, calmbrain.svg (hero visual flow diagram)
 - element_zen_waves_wide.svg (section dividers)
 - icon_hands_free.svg (Bluetooth feature)
 - lobedrive_demo.mp4 (demo video)
