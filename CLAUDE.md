@@ -143,5 +143,5 @@ Public-facing marketing website for LobeDrive.
 - No web-specific agents or skills at this time
 
 **UI/UX Skill:**
-- `ui-ux-pro-max` skill available at `.claude/skills/ui-ux-pro-max/`
+- `ui-ux-pro-max` — global skill at `~/.claude/skills/`
 - Use for visual hierarchy, spacing, typography, accessibility, landing page design, and responsive layouts
