@@ -11,6 +11,31 @@ This file tracks website updates, content changes, and maintenance tasks.
 
 ### High Priority (V1 Launch)
 
+- [ ] **Migrera hosting: GitHub Pages → Netlify + Cloudflare**
+      Status: Not started
+      Notes: Nuvarande setup använder GitHub Pages (kräver public repo). Byt till samma
+      setup som jakob-sorensen.com:
+
+      **Referens:** jakob-sorensen.com deploy (2026-03-18):
+      - Netlify: auto-deploy från GitHub main, build: statisk site → dist/
+      - Cloudflare DNS: CNAME `@` + `www` → [site].netlify.app (DNS only, inget proxy)
+      - SSL: Let's Encrypt via Netlify (gratis, auto-renew)
+
+      **Steg:**
+      1. Skapa ny site på app.netlify.com → Import existing project → GitHub → LobeDrive web/
+      2. Build settings: publish directory = web/ (eller root om det är en statisk site utan build)
+      3. Verifiera på *.netlify.app
+      4. I Netlify: Add custom domain → lobedrive.com
+      5. I Cloudflare: ta bort befintliga DNS-records, lägg till:
+         - CNAME `@` → [site].netlify.app (DNS only)
+         - CNAME `www` → [site].netlify.app (DNS only)
+      6. Netlify: Verify DNS → Provision Let's Encrypt certificate
+      7. Verifiera https://lobedrive.com + https://www.lobedrive.com + redirect www↔root
+      8. Gör website-repot PRIVATE på GitHub (public var bara för gratis GitHub Pages hosting)
+
+      **Viktigt:** Sätt DNS-poster till "DNS only" (grått moln), INTE proxied (orange moln).
+      Netlify sköter CDN + SSL + DDoS-skydd.
+
 - [ ] Add App Store download CTA
       Status: Not started
       Notes: Prominent placement in hero and footer
