@@ -11,30 +11,25 @@ This file tracks website updates, content changes, and maintenance tasks.
 
 ### High Priority (V1 Launch)
 
-- [ ] **Migrera hosting: GitHub Pages → Netlify + Cloudflare**
-      Status: Not started
-      Notes: Nuvarande setup använder GitHub Pages (kräver public repo). Byt till samma
-      setup som jakob-sorensen.com:
+- [ ] **Migrera hosting: GitHub Pages → Netlify**
+      Status: Planerad (ej genomförd) — full plan i `dev-docs/plan-netlify-migration.md`
+      Notes: Flytta hosting till Netlify så GitHub-repot kan göras privat (publikt
+      idag enbart för gratis GitHub Pages). Komplett genomförandedokument med
+      netlify.toml, DNS-tabell, verifieringschecklista och rollback finns i
+      `dev-docs/plan-netlify-migration.md`. Kör inte i delar — följ faserna i ordning.
 
-      **Referens:** jakob-sorensen.com deploy (2026-03-18):
-      - Netlify: auto-deploy från GitHub main, build: statisk site → dist/
-      - Cloudflare DNS: CNAME `@` + `www` → [site].netlify.app (DNS only, inget proxy)
-      - SSL: Let's Encrypt via Netlify (gratis, auto-renew)
+      **Förlaga:** `noak-hemsida` (statisk, `publish = "."`) — INTE jakob-sorensen.com
+      (som är Astro med build → dist/).
 
-      **Steg:**
-      1. Skapa ny site på app.netlify.com → Import existing project → GitHub → LobeDrive web/
-      2. Build settings: publish directory = web/ (eller root om det är en statisk site utan build)
-      3. Verifiera på *.netlify.app
-      4. I Netlify: Add custom domain → lobedrive.com
-      5. I Cloudflare: ta bort befintliga DNS-records, lägg till:
-         - CNAME `@` → [site].netlify.app (DNS only)
-         - CNAME `www` → [site].netlify.app (DNS only)
-      6. Netlify: Verify DNS → Provision Let's Encrypt certificate
-      7. Verifiera https://lobedrive.com + https://www.lobedrive.com + redirect www↔root
-      8. Gör website-repot PRIVATE på GitHub (public var bara för gratis GitHub Pages hosting)
+      **Nyckelfakta (verifierat 2026-05-26):**
+      - Statisk HTML i repo-roten, ingen build → publish directory = `.` (root), inte `web/`.
+      - DNS hos Cloudflare; alla poster ska vara grått moln (DNS only), aldrig proxied.
+      - netlify.toml inkluderar säkerhets-headers (CSP/HSTS) + deny-list som 404:ar
+        interna filer (`/CLAUDE.md`, `/dev-docs/*`, `/Docs/*` är publikt läsbara idag!).
 
-      **Viktigt:** Sätt DNS-poster till "DNS only" (grått moln), INTE proxied (orange moln).
-      Netlify sköter CDN + SSL + DDoS-skydd.
+      **Fasordning:** 0 skapa netlify.toml → 1 Netlify-site → 2 custom domain →
+      3 flytta DNS i Cloudflare → 4 SSL → 5 verifiera → 6 gör repot privat → 7 cleanup.
+      Gör INTE repot privat förrän Fas 1–5 är verifierade (rollback kräver publikt repo).
 
 - [ ] Add App Store download CTA
       Status: Not started
@@ -73,6 +68,12 @@ This file tracks website updates, content changes, and maintenance tasks.
       Notes: Wait for user feedback
 
 ## Completed
+
+- [x] **Säkerhetsaudit av publikt repo + planera Netlify-migrering**
+      Completed: 2026-05-26
+      - Skapade `dev-docs/plan-netlify-migration.md` (komplett genomförandeplan: netlify.toml med säkerhets-headers + deny-list, DNS-tabell, verifieringschecklista, rollback). Korrigerade tidigare task-utkast (statisk modell `noak-hemsida`, publish=`.`, inte Astro/`web/`).
+      - Körde säkerhetsaudit (security-auditor) av det publika GitHub-repot. Verdikt: premissen håller — inga secrets, inga credentials, ingen PII, ren git-historik (47 commits skannade, noll träffar). Enda nyans: interna dev-docs (`CLAUDE.md`, `dev-docs/*`) är publikt läsbara idag — åtgärdas av migrering + privat repo + deny-list.
+      - Städning: tog bort dött `INTEGRATION EXAMPLES`-block i `assets/js/script.js` (oanvända platshållarfunktioner `submitToMailchimp`/`submitToGoogleSheets`/`submitToConvertKit`). Tog bort generisk/felaktig `README.md`. Aktiva formulär går via Google Forms-handlers.
 
 - [x] **Create Bluetooth Setup Guide Page (V1 MANDATORY)**
       Completed: 2025-12-30

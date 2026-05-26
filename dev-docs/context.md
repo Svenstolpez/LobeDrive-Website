@@ -22,6 +22,12 @@ This file defines the technical architecture and content guidelines for the Lobe
 - HTTPS enabled
 - CDN for assets if needed
 
+**Hosting-beslut (2026-05-26):** Migrering planerad GitHub Pages → Netlify så att
+GitHub-repot kan göras privat (publikt idag enbart för gratis GitHub Pages).
+Genomförandeplan: `dev-docs/plan-netlify-migration.md`. Säkerhetsaudit av det
+publika repot bekräftade inga secrets/PII/credentials i kod eller git-historik —
+enda exponeringen är interna dev-docs som blir privata via migreringen.
+
 ## Architecture Decisions
 
 ### Design Philosophy
